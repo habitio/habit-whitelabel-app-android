@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.muzzley.app.profiles.BundleItem xmlns:android="http://schemas.android.com/apk/res/android"
+                                     xmlns:app="http://schemas.android.com/apk/res-auto"
+                                     xmlns:tools="http://schemas.android.com/tools"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="wrap_content"
+                                     android:layout_margin="5dp"
+                                     android:orientation="vertical"
+                                     >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:visibility="gone"
+            tools:text="@string/mobile_service_device_selection_number_devices"
+            tools:visibility="visible"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_below="@+id/header"/>
+
+        <TextView
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="10dp"
+            android:visibility="gone"
+            tools:text="I agree with these terms and conditions"
+            tools:visibility="visible"/>
+
+
+    </RelativeLayout>
+    <!-- layers -->
+    <RelativeLayout
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blackish_alpha80">
+
+        <TextView
+            android:id="@+id/progressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:padding="10dp"
+            tools:text="untranslated description"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_below="@+id/progressText"/>
+
+        <TextView
+            android:id="@+id/stepLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/progressBar"
+            android:layout_alignTop="@+id/progressBar"
+            android:layout_toLeftOf="@+id/progressBar"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            tools:text="1/4"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tryAgain"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:padding="10dp"
+        android:textColor="@color/blue"
+        android:text="@string/mobile_retry"
+        android:textAllCaps="true"
+        android:layout_gravity="top|right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</com.muzzley.app.profiles.BundleItem>

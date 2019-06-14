@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.muzzley.util.ui.RadioContainer
+    android:id="@+id/units"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RadioButton
+        android:id="@+id/metric"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="@color/white"
+        android:button="@null"
+        android:drawableRight="@drawable/btn_radio"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        tools:text="AAA"/>
+    <RadioButton
+        android:id="@+id/imperial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:button="@null"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:drawableRight="@drawable/btn_radio"
+        tools:text="BBB"/>
+
+</com.muzzley.util.ui.RadioContainer>

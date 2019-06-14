@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:shape="oval">
+
+            <solid
+                android:color="@color/blue_pressed_selector"/>
+
+            <size
+                android:width="@dimen/device_picker_blue_button_plus"
+                android:height="@dimen/device_picker_blue_button_plus"/>
+        </shape>
+    </item>
+    <!--<item android:state_enabled="false" >-->
+        <!--<shape-->
+            <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+            <!--android:shape="oval">-->
+
+            <!--<solid-->
+                <!--android:color="@color/gray"/>-->
+
+            <!--<size-->
+                <!--android:width="@dimen/device_picker_blue_button_plus"-->
+                <!--android:height="@dimen/device_picker_blue_button_plus"/>-->
+        <!--</shape>-->
+    <!--</item>-->
+    <!--<item android:state_pressed="true" >-->
+        <!--<shape-->
+            <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+            <!--android:shape="oval">-->
+
+            <!--<solid-->
+                <!--android:color="@color/blue_dark"/>-->
+
+            <!--<size-->
+                <!--android:width="@dimen/device_picker_blue_button_plus"-->
+                <!--android:height="@dimen/device_picker_blue_button_plus"/>-->
+        <!--</shape>-->
+    <!--</item>-->
+    <!--<item>-->
+        <!--<shape-->
+            <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+            <!--android:shape="oval">-->
+
+            <!--<solid-->
+                <!--android:color="@color/blue"/>-->
+
+            <!--<size-->
+                <!--android:width="@dimen/device_picker_blue_button_plus"-->
+                <!--android:height="@dimen/device_picker_blue_button_plus"/>-->
+        <!--</shape>-->
+    <!--</item>-->
+
+
+</selector>

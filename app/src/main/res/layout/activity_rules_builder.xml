@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_create_worker"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/header_info_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/abc_action_bar_default_height_material"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true">
+
+        <ImageView
+            android:id="@+id/new_agent_icon_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_worker_name"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="21dp"
+            />
+
+        <ImageView
+            android:id="@+id/clean_text_agent_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="16dp"
+            android:src="@drawable/icon_clean"
+            android:visibility="invisible"/>
+
+        <EditText
+            android:id="@+id/edittext_worker_label"
+            android:layout_toRightOf="@id/new_agent_icon_1"
+            android:layout_toLeftOf="@id/clean_text_agent_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textEmailSubject"
+            android:background="@color/white"
+            android:hint="@string/mobile_worker_add_name"
+            android:maxLines="1"
+            android:textColorHint="@color/device_picker_search_text_color"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/worker_button_finish"
+        style="@style/ButtonFooter"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/mobile_finish"
+    />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header_info_name"
+        android:layout_above="@id/worker_button_finish">
+
+        <View
+            android:id="@+id/styled_line"
+            android:layout_width="@dimen/device_picker_vertical_line_width"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/device_picker_vertical_line_margin_left"
+            android:background="@color/gray_light" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:cacheColorHint="@color/colorPrimary">
+
+            <RelativeLayout
+                android:id="@+id/scroll_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/agents_create_margins"
+                android:paddingRight="@dimen/agents_create_margins"
+                android:background="@drawable/builder_background">
+
+                <View
+                    android:id="@+id/top_white_block_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/agents_create_parents_margin_top"
+                    android:background="@color/white"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/agents_create_parents_height"
+                    android:background="@drawable/create_agent_parent_background"
+                    android:layout_marginTop="@dimen/agents_create_parents_margin_top"
+                    android:id="@+id/linearLayout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mobile_choose_device_vc_first_step"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="@dimen/agents_create_parents_text_margin"
+                        android:layout_marginRight="@dimen/agents_create_parents_text_margin"
+                        android:fontFamily="sans-serif-medium"
+                        android:textStyle="italic"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="@dimen/agents_create_parents_text_size"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/dinamic_agents_layout_trigger"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/linearLayout"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/add_base_trigger"
+                        layout="@layout/layout_agent_dinamic_plus_button" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dinamic_agents_layout_action"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/dinamic_agents_layout_trigger"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/add_base_action"
+                        android:visibility="gone"
+                        layout="@layout/layout_agent_dinamic_plus_button" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/watch_options_container"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dinamic_agents_layout_action"
+                    android:background="@android:color/white"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray_light" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/available_on_watch"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif-light"
+                            android:textSize="18sp"/>
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            android:id="@+id/chk_show_in_watch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="-5dp"
+                            android:theme="@style/BlueCheckbox"/>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray_light" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dinamic_agents_layout_state"
+                    android:layout_below="@+id/dinamic_agents_layout_action"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/add_base_state"
+                        android:visibility="gone"
+                        layout="@layout/layout_agent_dinamic_plus_button" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/bottom_white_block_cover"
+                    android:layout_below="@id/dinamic_agents_layout_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:visibility="invisible"
+                    android:background="@color/white"/>
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@id/worker_button_finish"
+        android:background="@drawable/agent_gradient_shadow_over_finish"/>
+
+    <View
+        android:id="@+id/shadow_bellow_header"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_below="@id/header_info_name"
+        android:background="@drawable/agent_gradient_shadow_new"/>
+
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<com.muzzley.app.profiles.ChannelItem xmlns:android="http://schemas.android.com/apk/res/android"
+                                      android:layout_width="match_parent"
+                                      android:layout_height="66dp"
+                                      xmlns:tools="http://schemas.android.com/tools"
+                                      android:layout_centerVertical="true"
+                                      android:layout_marginBottom="1dp"
+                                      android:orientation="horizontal"
+                                      android:paddingLeft="10dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/profile_placeholder"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:textSize="17sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/imageView"
+        android:layout_toLeftOf="@id/checkbox"
+        android:paddingLeft="10dp"
+        tools:text="profile"/>
+
+    <TextView
+        android:textSize="13sp"
+        android:id="@+id/error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_toRightOf="@id/imageView"
+        android:paddingLeft="10dp"
+        android:text="@string/mobile_service_device_selection_error"
+        android:textColor="@color/red"/>
+    <CheckBox
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:id="@+id/checkbox"
+        android:checked="true"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</com.muzzley.app.profiles.ChannelItem>

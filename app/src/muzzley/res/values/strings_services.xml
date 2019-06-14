@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+    <string name="app_name">Muzzley</string>
+    <string name="app_namespace">muzzley</string>
+    <string name="profile_social_facebook">https://www.facebook.com/muzzleypower</string>
+    <string name="profile_social_twitter">https://twitter.com/muzzleypower</string>
+    <string name="profile_social_blog">http://blog.muzzley.com/</string>
+    <string name="faq_url">https://www.muzzley.com/faq</string>
+    <string name="website_url">https://www.muzzley.com</string>
+    <string name="about_terms_conditions_url">https://www.muzzley.com/terms</string>
+    <string name="about_privacy_policy_url">https://www.muzzley.com/privacy</string>
+    <string name="app_client_id">REPLACEME</string>
+    <string name="azure_connection_string">REPLACEME</string>
+	<string name="azure_connection_string_previous">REPLACEME</string>
+    <string name="azure_notification_hub_path">REPLACEME</string>
+    <string name="app_open_scheme">muzzley</string>
+    <string name="location_notification_title">@string/mobile_muzzley_location_notification_title</string>
+    <string name="location_notification_text">@string/mobile_muzzley_location_notification_text</string>
+
+    <bool name="disable_shortcuts">true</bool>
+    <bool name="disable_timeline">true</bool>
+
+</resources>

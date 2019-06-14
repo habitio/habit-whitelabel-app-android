@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.muzzley.util.ui.MuzzleySwipeRefreshLayout
+    android:id="@+id/layout_swipe_refresh"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_lighter"
+            >
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <include
+                    android:id="@+id/shortcuts_cell"
+                    layout="@layout/adapter_item_shortcuts"/>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <TextView
+                android:id="@+id/clear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|end"
+                android:minHeight="40dp"
+                android:padding="10dp"
+                android:text="@string/mobile_clear"
+                android:textColor="@color/blue_pressed_selector_dark"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_scrollFlags="scroll|enterAlways|exitUntilCollapsed"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!--<include-->
+            <!--layout="@layout/cards_layout_blank_states"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:gravity="center"/>-->
+
+        <ViewFlipper android:id="@+id/view_flipper"
+                     xmlns:android="http://schemas.android.com/apk/res/android"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <!--<include-->
+                <!--layout="@layout/cards_layout_blank_states"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:gravity="center"/>-->
+
+            <include
+                layout="@layout/cards_layout_data"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"/>
+
+            <include
+                android:id="@+id/layout_loading_state"
+                layout="@layout/cards_layout_loading_states"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"/>
+
+            <include
+                android:id="@+id/layout_blank_state"
+                layout="@layout/cards_layout_blank_states"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"/>
+
+
+
+            <include
+                android:id="@+id/layout_error_state"
+                layout="@layout/cards_layout_error_states"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"/>
+
+        </ViewFlipper>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</com.muzzley.util.ui.MuzzleySwipeRefreshLayout>
+

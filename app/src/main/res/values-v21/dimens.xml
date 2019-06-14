@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <fraction name="circle_shadow_radius">70%p</fraction>
+    <dimen name="cardview_default_radius">2dp</dimen> <!-- overrides support library value -->
+</resources>

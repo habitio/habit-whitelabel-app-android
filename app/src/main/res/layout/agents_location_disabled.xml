@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white_opacity_95"
+              android:clickable="true"
+              android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/agent_compromised"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/default_layout_vertical_margin"
+        android:src="@drawable/icon_location"
+        />
+
+    <TextView
+        android:id="@+id/agent_location_disabled"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_weight="1"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:text="@string/mobile_worker_location_permission_html"
+        android:textColor="@color/blackish"
+        />
+
+    <TextView
+        android:id="@+id/agent_update_location"
+        style="@style/TextAppearanceMicro"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/selector_agent_warning_buttons"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/mobile_lets_do_it"
+        android:textAllCaps="true"
+        android:textColor="@color/blue"
+        />
+
+</LinearLayout>

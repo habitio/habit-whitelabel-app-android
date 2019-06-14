@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/gray_lighter">
+
+        <ImageView
+            android:id="@+id/placeholder_photo_edit"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="61dp"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/placeholder_photo_label"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/placeholder_photo_edit"
+            android:layout_marginTop="16dp"
+            android:lines="2"
+            android:gravity="center"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="normal"
+            android:textSize="14sp"
+            android:textColor="@color/profile_placeholder_username_text"
+            android:text="@string/mobile_edit_photo_text"/>
+
+        <Button
+            android:id="@+id/btn_photo_edit_take_photo"
+            style="@style/ButtonRoundedTransparent"
+            android:layout_below="@+id/placeholder_photo_label"
+            android:layout_centerHorizontal="true"
+            android:text="@string/mobile_take_photo"
+            android:layout_width="@dimen/button_blank_state_width"
+            android:layout_height="40dp"
+            android:layout_marginTop="49dp"/>
+
+        <Button
+            android:id="@+id/btn_photo_edit_choose_photo"
+            style="@style/ButtonRoundedTransparent"
+            android:layout_below="@+id/btn_photo_edit_take_photo"
+            android:layout_centerHorizontal="true"
+            android:text="@string/mobile_choose_library"
+            android:layout_width="@dimen/button_blank_state_width"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/btn_photo_edit_save"
+            style="@style/ButtonFooter"
+            android:layout_below="@+id/btn_photo_edit_choose_photo"
+            android:layout_centerHorizontal="true"
+            android:text="@string/mobile_save"
+            android:layout_width="@dimen/button_blank_state_width"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"/>
+
+    </RelativeLayout>
+
+</ScrollView>

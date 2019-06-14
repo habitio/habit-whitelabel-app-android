@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditText
+        android:id="@+id/text"
+
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:textCursorDrawable="@drawable/cursor_blue"
+        android:inputType="text"
+        android:background="@color/white"
+        android:hint="@string/mobile_shortcut_add_name"
+        android:maxLines="1"
+        android:textColorHint="@color/device_picker_search_text_color"
+        android:textSize="@dimen/device_picker_search_text_size"
+        android:fontFamily="sans-serif-light"
+        android:layout_weight="1" />
+
+    <ImageButton
+        android:id="@+id/btn_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="@dimen/device_picker_horizontal_margin"
+        android:background="@android:color/transparent"
+        android:src="@drawable/icon_clean"
+        android:visibility="invisible" />
+
+</merge>

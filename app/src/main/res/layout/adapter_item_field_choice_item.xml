@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <RadioButton
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center_vertical|left"
+        android:drawableRight="@drawable/checkbox_padless"
+        android:maxLines="1"
+        tools:text="device"
+        android:button="@null"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:layout_margin="4dp"
+        android:textColor="@color/black_checked_selector"
+        android:background="@drawable/selector_button_checked"
+        android:textSize="11sp"
+        xmlns:tools="http://schemas.android.com/tools"/>
+    <RadioButton
+        android:checked="true"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center_vertical|left"
+        android:drawableRight="@drawable/checkbox_padless"
+        android:maxLines="1"
+        tools:text="device"
+        android:button="@null"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:layout_margin="4dp"
+        android:textColor="@color/black_checked_selector"
+        android:background="@drawable/selector_button_checked"
+        android:textSize="11sp"
+        xmlns:tools="http://schemas.android.com/tools"/>
+</LinearLayout>
+

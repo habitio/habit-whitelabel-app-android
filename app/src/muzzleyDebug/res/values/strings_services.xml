@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+    <string name="app_name">Muzz DEV</string>
+    <string name="site_url">http://site.develop.muzzley.com/</string>
+    <string name="preferences_name">Muzzley Debug Preferences</string>
+    <string name="workers_url">https://site.develop.muzzley.com/worker-editor-v3/</string>
+    <string name="azure_connection_string">REPLACEME</string>
+    <string name="webview_base_url">http://site.develop.muzzley.com/widgets/%s/raw</string>
+    <string name="fibaro_smoke_profile_id">8de9c5c4-bb18-11e7-af50-5f781bfb2f51</string>
+    <string name="app_open_scheme">muzzleydev</string>
+
+</resources>

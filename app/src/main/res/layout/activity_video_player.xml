@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.muzzley.util.ui.ijk.VideoFrame
+    android:background="@color/black"
+    android:id="@+id/videoSurfaceContainer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.muzzley.util.ui.ijk.IjkVideoView
+        android:layout_gravity="center"
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="188dp"
+        android:visibility="visible"/>
+
+    <ImageButton
+        android:id="@+id/videoBattery"
+        style="@android:style/MediaButton"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="-15dp"
+        android:layout_marginTop="-5dp"
+        android:contentDescription="@string/media_controls"
+        android:src="@drawable/icon_battery"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+    <ImageButton
+        android:id="@+id/videoLive"
+        style="@android:style/MediaButton"
+        android:layout_gravity="left|top"
+        android:contentDescription="@string/media_controls"
+        app:srcCompat="@drawable/icon_live"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+    <ImageButton
+        android:id="@+id/videoRecording"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_gravity="right|top"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/video_recording_icon"
+        android:contentDescription="@string/media_controls"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+    <ImageButton
+        android:id="@+id/fullScreenBtn"
+        style="@android:style/MediaButton"
+        android:layout_gravity="bottom|right"
+        android:contentDescription="@string/media_controls"
+        app:srcCompat="@drawable/icon_fullscreen"
+        />
+
+
+    <TextView
+        android:id="@+id/videoCounter"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:gravity="right|top"
+        android:text="00.00"
+        android:textColor="@android:color/white"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+    <RelativeLayout
+        android:id="@+id/videoLayer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blackish_alpha80"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <FrameLayout
+            android:padding="10dp"
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="25dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/videoIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:visibility="gone"
+                app:srcCompat="@drawable/icon_no_video"
+                tools:visibility="visible"/>
+            <ProgressBar
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/videoLoading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:indeterminate="true"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+
+
+        </FrameLayout>
+        <TextView
+            android:padding="10dp"
+            android:layout_below="@+id/frame"
+            android:id="@+id/videoText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:visibility="gone"
+            tools:text="Buffering..."
+            tools:visibility="visible"/>
+
+
+    </RelativeLayout>
+
+</com.muzzley.util.ui.ijk.VideoFrame>

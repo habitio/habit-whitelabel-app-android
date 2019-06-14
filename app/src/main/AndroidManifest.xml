@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.muzzley"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.muzzley.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.google.android.permission.PROVIDE_BACKGROUND"/>
+    <!--<uses-permission android:name="android.permission.READ_PHONE_STATE"/>-->
+    <!--<uses-permission android:name="android.permission.RECEIVE_SMS"/>-->
+    <!--<uses-permission android:name="android.permission.READ_CONTACTS"/>-->
+    <!--<uses-permission android:name="android.permission.READ_CALL_LOG"/>-->
+    <!--<uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE"/>-->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false"/>
+
+    <application
+        tools:replace="android:allowBackup"
+        android:usesCleartextTraffic="true"
+        android:name=".App"
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/Theme.Muzzley.Light">
+        <!--because of azure notifications-->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        <uses-library android:name="android.test.runner"
+                      android:required="false" />
+        <uses-library android:name="android.test.base"
+                      android:required="false" />
+        <uses-library android:name="android.test.mock"
+                      android:required="false" />
+        <activity
+            android:name=".app.HomeActivity"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Muzzley.Toolbar"/>
+        <activity
+            android:name=".app.login.GetStartedActivity"
+            android:theme="@style/Theme.Muzzley.Toolbar.Transparent"/>
+        <activity
+            android:name=".app.login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.Muzzley.ActionBar.Transparent">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.muzzley.app.login.GetStartedActivity"/>
+
+        </activity>
+        <activity
+            android:name=".app.login.ResetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.Muzzley.ActionBar.Transparent">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.muzzley.app.login.LoginActivity"/>
+
+        </activity>
+        <activity
+            android:name=".app.login.SignUpActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.Muzzley.ActionBar.Transparent">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.muzzley.app.login.GetStartedActivity"/>
+
+        </activity>
+        <activity
+            android:name=".app.InterfaceActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.muzzley.app.HomeActivity"/>
+        </activity>
+        <activity
+            android:name=".app.InterfaceSettingsActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.muzzley.app.InterfaceActivity"/>
+        </activity>
+        <activity
+            android:label="@string/mobile_add_devices_services_title"
+            android:name=".app.ProfilesActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.muzzley.app.HomeActivity"/>
+        </activity>
+        <activity
+            android:name=".app.workers.DevicePickerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".app.workers.WorkerWebviewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity
+            android:name=".app.cards.DevicePickActivityCards"
+            android:label="Pick Devices"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.muzzley.app.HomeActivity"/>
+        </activity>
+        <activity
+            android:name=".app.cards.MapsActivity"
+            android:label="@string/mobile_cards_location"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.muzzley.app.HomeActivity"/>
+        </activity>
+        <activity
+            android:name=".app.tiles.EditGroupActivity"
+            android:label="@string/mobile_group_edit"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnchanged">
+        </activity>
+        <activity
+            android:name=".app.userprofile.NewUserPhotoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.muzzley.app.HomeActivity"/>
+        </activity>
+        <activity
+            android:name=".app.userprofile.AboutActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.muzzley.app.HomeActivity"/>
+        </activity>
+        <activity
+            android:name=".app.userprofile.FeedbackActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.muzzley.app.HomeActivity"/>
+        </activity>
+
+        <!-- Receivers -->
+        <receiver
+            android:name=".app.receivers.LocationReceiver2"
+            android:exported="false">
+        </receiver>
+        <receiver
+            android:name=".app.receivers.BootReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:label="BootReceiver"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".app.notifications.AzureNotificationsHandler"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter android:priority="100">
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+
+                <category android:name="com.muzzley.dev"/>
+            </intent-filter>
+        </receiver>
+        <!-- Call and Sms receiver, used to detect received calls and received sms -->
+        <receiver
+            android:name=".app.receivers.CallReceiver"
+            android:enabled="false"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".app.receivers.SmsReceiver"
+            android:enabled="false">
+            <intent-filter android:priority="1000">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".app.receivers.UpdateReceiver"
+            android:exported="true"
+            android:enabled="true">
+            <intent-filter >
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Facebook -->
+        <!--
+        In order to use facebook login one of the requirements is to
+        register com.facebook.LoginActivity in the manifest
+        -->
+        <!--<activity-->
+            <!--android:name="com.facebook.LoginActivity"-->
+            <!--android:theme="@style/Theme.Muzzley.Transparent"/>-->
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_id"/>
+
+        <!-- Google+ -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/maps_key"/>
+        <meta-data
+            tools:replace="android:value"
+            android:name="com.google.android.awareness.API_KEY"
+            android:value="@string/maps_key"/>
+        <meta-data
+            android:name="com.google.android.nearby.messages.API_KEY"
+            android:value="@string/maps_key"/>
+
+        <!-- MixPanel -->
+        <meta-data
+            android:name="com.mixpanel.android.MPConfig.EnableDebugLogging" android:value="false"/>
+        <!--otherwise cause problems in Android 9.0-->
+        <meta-data android:name="com.mixpanel.android.MPConfig.DisableViewCrawler" android:value="true" />
+
+        <!-- <meta-data -->
+        <!-- android:name="com.mixpanel.android.MPConfig.AutoShowMixpanelUpdates" -->
+        <!-- android:value="false" /> -->
+
+
+        <!-- <meta-data android:name="com.mixpanel.android.MPConfig.DisableDecideChecker" -->
+        <!-- android:value="true" /> -->
+
+        <receiver
+            android:enabled="false"
+            android:name=".app.shortcuts.ShortcutWidgetProvider"
+            android:label="@string/widget_name">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="com.muzzley.action.WIDGET_BUTTON_CLICK"/>
+                <action android:name="com.muzzley.action.WIDGET_TAB_CLICK"/>
+                <action android:name="com.muzzley.action.RETRY_REQUEST"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/shortcuts_widget_info"/>
+        </receiver>
+
+        <activity
+            android:name=".app.shortcuts.ShortcutsActivity"
+            android:label="@string/title_activity_shortcuts"
+            android:theme="@style/Theme.Muzzley.Transparent">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.muzzley.app.HomeActivity"/>
+        </activity>
+        <activity
+            android:name=".app.shortcuts.ShortcutsActivity2"
+            android:label="@string/title_activity_shortcuts"
+            android:theme="@style/Theme.Muzzley.Transparent">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.muzzley.app.HomeActivity"/>
+        </activity>
+        <activity
+            android:name=".app.cards.productdetails.ProductDetailsActivity"
+            android:label=""
+            android:screenOrientation="portrait"/>
+
+        <!--<meta-data-->
+            <!--android:name="io.fabric.ApiKey"-->
+            <!--android:value="4fa38b50cbab67b1a0b02d1f0257a1b7414d0f84"/>-->
+
+        <activity
+            android:name=".app.LauncherActivity"
+            android:launchMode="singleTop"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".app.workers.RulesBuilder"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".app.WebViewActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".app.userprofile.SettingsActivity"
+            android:label="@string/mobile_settings"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.muzzley.app.HomeActivity"/>
+        </activity>
+        <activity
+            android:label="@string/mobile_location_edit"
+            android:name=".app.userprofile.PlacesActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.muzzley.app.userprofile.SettingsActivity"/>
+        </activity>
+        <activity
+            android:name=".app.profiles.TutorialActivity"
+            android:label="@string/mobile_tutorial_title"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.muzzley.app.ProfilesActivity"/>
+        </activity>
+
+        <service android:name=".app.notifications.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name=".util.ui.ijk.MediaPlayerService"
+            android:exported="false"/>
+
+        <!--android:launchMode="singleTask"-->
+        <activity
+            android:name=".app.profiles.BundleCardsActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:label="@string/mobile_service_summary"
+            android:name=".app.profiles.SummaryActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.muzzley.app.ProfilesActivity"/>
+        </activity>
+        <activity
+            android:windowSoftInputMode="adjustResize"
+            android:name=".app.auth.AuthActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".app.login.UnauthorizedActivity"
+            android:theme="@style/Theme.Muzzley.Toolbar.Transparent"
+            />
+        <activity
+            android:name=".app.profiles.RecipeShowInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".app.profiles.RecipeOAuthActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/app_open_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".app.profiles.RecipeCardsActivity"
+            android:screenOrientation="portrait"/>
+
+        <service android:name=".app.location.LocationService">
+        </service>
+
+    </application>
+
+</manifest>

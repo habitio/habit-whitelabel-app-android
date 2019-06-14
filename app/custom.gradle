@@ -1,0 +1,13 @@
+//deprecated see ../custom.gradle
+def extPropertiesFromFile(String source) {
+  def properties = new Properties()
+  def propertiesFile = file(source)
+  if (propertiesFile.canRead()) {
+    properties.load(new FileInputStream(propertiesFile))
+    for (Map.Entry property in properties) {
+      project.ext[property.key] = property.value
+    }
+  }
+}
+
+extPropertiesFromFile('build.properties')

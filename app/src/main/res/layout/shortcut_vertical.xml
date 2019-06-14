@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.muzzley.app.shortcuts.ShortcutContainer
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="10dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/btn_shortcut"
+            android:layout_width="@dimen/widget_shortcut_btn_size"
+            android:layout_height="@dimen/widget_shortcut_btn_size"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shortcut_watch_icon_circle"
+            android:scaleType="center"
+            android:src="@drawable/ic_arrow"/>
+
+        <!--android:layout_marginLeft="-2dp"-->
+        <!--android:layout_marginTop="-2dp"-->
+        <!--android:visibility="invisible"-->
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="@dimen/widget_shortcut_btn_size"
+            android:layout_height="@dimen/widget_shortcut_btn_size"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/white"
+            android:indeterminateDrawable="@drawable/loader"
+            />
+
+
+        <TextView
+            android:layout_below="@id/btn_shortcut"
+            android:id="@+id/shortcut_title"
+            android:layout_width="@dimen/widget_shortcut_btn_size"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center_horizontal"
+            android:lineSpacingMultiplier="0.9"
+            android:lines="2"
+            android:maxLines="2"
+            android:paddingTop="10dp"
+            android:textColor="@color/blackish"
+            tools:text="Shortcut 4 2 lines"/>
+
+
+    </RelativeLayout>
+
+</com.muzzley.app.shortcuts.ShortcutContainer>
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:clipToPadding="false"-->
+    <!--android:clipChildren="false"-->
+    <!--android:gravity="center"-->
+    <!--android:paddingTop="2dp"-->
+    <!--tools:layout_width="match_parent"-->
+
+    <!--<ProgressBar-->
+        <!--android:id="@+id/progress"-->
+        <!--android:layout_width="62dp"-->
+        <!--android:layout_height="62dp"-->
+        <!--android:layout_marginLeft="-2dp"-->
+        <!--android:layout_marginTop="-2dp"-->
+        <!--android:indeterminate="true"-->
+        <!--android:indeterminateDrawable="@drawable/loader"-->
+        <!--android:visibility="invisible" />-->
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/container_shortcut"-->
+        <!--android:layout_width="64dp"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<FrameLayout-->
+            <!--android:id="@+id/bg_shadow"-->
+            <!--android:layout_width="62dp"-->
+            <!--android:layout_height="62dp"-->
+            <!--android:layout_marginLeft="-2dp"-->
+            <!--android:layout_marginTop="-2dp"-->
+            <!--android:background="@drawable/shortcut_shadow" />-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/bg_shortcut"-->
+            <!--android:layout_width="@dimen/widget_shortcut_btn_size"-->
+            <!--android:layout_height="@dimen/widget_shortcut_btn_size"-->
+            <!--android:src="@drawable/circle_shape" />-->
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/btn_shortcut"-->
+            <!--android:layout_width="@dimen/widget_shortcut_btn_size"-->
+            <!--android:layout_height="@dimen/widget_shortcut_btn_size"-->
+            <!--android:background="@android:color/transparent"-->
+            <!--android:src="@drawable/ic_arrow" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/text_done"-->
+            <!--android:layout_width="@dimen/widget_shortcut_btn_size"-->
+            <!--android:layout_height="@dimen/widget_shortcut_btn_size"-->
+            <!--android:gravity="center"-->
+            <!--android:fontFamily="sans-serif-condensed"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:text="@string/mobile_done"-->
+            <!--android:visibility="gone" />-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/icon_show_on_watch"-->
+            <!--android:layout_width="19dp"-->
+            <!--android:layout_height="19dp"-->
+            <!--android:layout_toRightOf="@+id/bg_shortcut"-->
+            <!--android:layout_below="@+id/bg_shortcut"-->
+            <!--android:layout_marginLeft="-19dp"-->
+            <!--android:layout_marginTop="-19dp"-->
+            <!--android:background="@drawable/shortcut_watch_icon_circle"-->
+            <!--android:scaleType="center"-->
+            <!--android:src="@drawable/ic_clock" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/shortcut_title"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/btn_shortcut"-->
+            <!--android:fontFamily="sans-serif-light"-->
+            <!--android:paddingTop="10dp"-->
+            <!--android:lineSpacingMultiplier="0.9"-->
+            <!--android:gravity="center_horizontal"-->
+            <!--android:lines="2"-->
+            <!--android:maxLines="2"-->
+            <!--android:ellipsize="end"-->
+            <!--android:textColor="@color/blackish"-->
+            <!--tools:text="Shortcut 4 2 lines" />-->
+
+    <!--</RelativeLayout>-->
+
+<!--</RelativeLayout>-->

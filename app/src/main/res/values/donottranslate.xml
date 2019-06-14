@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- possible redefined properties -->
+    <string name="app_name">Muzzley</string>
+
+    <!-- error -->
+    <string name="error_not_logged_in">Please login first and please try again</string>
+    <string name="error_connecting_muzzley">Couldn\'t contact muzzley. Check your network and try again.</string>
+    <string name="wifi_not_connected">Wifi is not connected</string>
+    <string name="cell_not_connected">Cellular is not connected</string>
+    <string name="container_error">Unable to load content</string>
+    <string name="invalid_credentials">Invalid credentials</string>
+    <string name="reset_password_ok">"Email sent. Please check your inbox."</string>
+    <string name="devices_delete_error">Unable to delete device. Please try again.</string>
+    <string name="error_load_interface">Unable to load interface</string>
+    <string name="error_invalid_device_name">Device name is not valid</string>
+
+    <string name="empty"/>
+    <string name="menu_edit">Edit</string>
+
+    <!-- Shortcuts -->
+    <string name="title_activity_shortcuts">Shortcuts</string>
+    <string name="widget_name">@string/mobile_onboarding_shortcuts_1_title</string>
+    <string name="widget_login_message">Shortcuts are not available.\nPlease login to Muzzley to enable them.</string>
+    <string name="widget_launch_muzzley">Launch Muzzley</string>
+    <string name="widget_retry">Retry</string>
+    <string name="widget_error_loading_message">Unable to connect. Please try again.</string>
+    <string name="widget_suggestions">Suggested</string>
+    <string name="available_on_watch">Available on smartwatch</string>
+    <string name="shortcuts_reorder_failure">Shortcuts reorder failed. Please try again</string>
+    <string name="shortcut_execute_failed">Failed</string>
+    <string name="unnamed">Unnamed</string>
+
+    <string name="no_shortcuts">No shortcuts</string>
+
+    <!-- timeline -->
+    <string name="connecting">Connecting&#8230;</string>
+    <string name="please_wait">Please wait&#8230;</string>
+    <string name="verifying_credentials">Verifying credentials&#8230;</string>
+    <string name="recover_password">Recover password</string>
+
+    <!-- workers -->
+
+    <!--<string name="agent_insufficient_permissions"><b>Grant Access</b><br /><b>\'%s\'</b> needs additional permissions</string>-->
+    <string name="worker_hardwarecapabilities_html"><![CDATA[<b>Agent Capability Constraint</b> <br/>This app version is not compatible with some features in the <b>\'%s\'</b> Agent.]]></string>
+    <string name="agent_text_state_first_string">Select one or more conditions for the agent</string>
+
+    <!-- interfaces -->
+    <string name="loading_interface">Muzzley is loading the interface&#8230;</string>
+
+    <!-- Media Player Labels -->
+    <string name="media_controls">Media Controls</string>
+
+
+    <!-- Product Details -->
+    <string name="product_details_delivery_text">Delivery: %1$s-%2$s %3$s</string>
+    <plurals name="product_details_location_text_imperial">
+        <item quantity="one">%1$s Location near you at %2$.2f mi</item>
+        <item quantity="other">%1$s Locations near you at %2$.2f mi</item>
+    </plurals>
+    <plurals name="product_details_location_text_metric">
+        <item quantity="one">%1$s Location near you at %2$s KM </item>
+        <item quantity="other">%1$s Locations near you at %2$s KM </item>
+    </plurals>
+    <!--<string name="product_details_location_text">%1$s Location near you at %2$s KM </string>-->
+    <string name="tap_to_retry">Tap to retry</string>
+    <string name="error_loading_page">Unfortunately we couldn\'t load this page.</string>
+
+    <!-- Menu -->
+    <string name="action_open_in_browser">Open in browser</string>
+
+
+    <!-- New Photo Profile Options -->
+    <string name="edit_profile">Edit Profile</string>
+    <string name="edit_profile_photo_gallery_intent_chooser_title">Select Picture</string>
+    <string name="edit_profile_photo_camera_intent_chooser_title">Select Camera</string>
+
+    <string name="VideoView_error_text_invalid_progressive_playback">Invalid progressive playback</string>
+    <string name="VideoView_error_text_unknown">Unknown</string>
+    <string name="terms">I agree with these <a href="http://www.muzzley.com/terms">terms and conditions</a></string>
+    <string name="group_no_change">No change necessary</string>
+    <string name="group_empty_name">You cannot have an empty name</string>
+    <string name="android_text_permission_1"><![CDATA[<b>Grant access</b><br /><br /> Follow these steps to enable necessary permissions. You can change this later in your phone\'s settings.<br /><br /> &nbsp;<b>1.</b> Open Android Settings <br /> &nbsp;<b>2.</b> Select Apps <br/> &nbsp;<b>3.</b> Find muzzley App <br/> &nbsp;<b>4.</b> Tap permissions <br/>]]></string>
+    <string name="android_text_permission_2"><![CDATA[&nbsp;<b>%1$d.</b> Turn %2$s ON<br/>]]></string>
+    <string name="update_permissions">Update permissions </string>
+    <string name="no_matching_devices">No matching devices found</string>
+    <string name="unknown_address">Unknown address</string>
+    <string name="no_info">--</string>
+    <string name="group">Group</string>
+    <string name="sunday">Sun</string>
+    <string name="monday">Mon</string>
+    <string name="tuesday">Tue</string>
+    <string name="wednesday">Wed</string>
+    <string name="thursday">Thu</string>
+    <string name="friday">Fri</string>
+    <string name="saturday">Sat</string>
+    <string name="could_not_load_workers">Unfortunately we could not load any agents\nPlease pull to refresh</string>
+    <string name="insert_pin">Insert PIN</string>
+    <string name="could_not_load_cards">Unfortunately we could not load any cards\nPlease pull to refresh</string>
+    <string name="could_not_load_settings">Unfortunately we could not load the settings\nPlease pull to refresh</string>
+    <string name="loading_settings">Loading settings...</string>
+    <string name="info">Info</string>
+
+</resources>

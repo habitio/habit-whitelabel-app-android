@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:windowSoftInputMode="adjustResize"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/label"
+        android:windowSoftInputMode="adjustResize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        tools:text="Already have\nVodafone Parenting Kit"
+        android:textColor="@color/blackish"
+        android:textSize="17sp"/>
+
+    <com.muzzley.util.ui.EditText
+        android:windowSoftInputMode="adjustResize"
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:drawableRight="@drawable/icon_edit_group_gray"
+        android:hint="@string/mobile_insert_code_placeholder"/>
+
+    <Button
+        android:id="@+id/submit"
+        android:windowSoftInputMode="adjustResize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/selector_button_rounded_transparent"
+        android:text="@string/mobile_activate_now"
+        android:textAllCaps="false"
+        android:textColor="@color/blue"/>
+
+</LinearLayout>

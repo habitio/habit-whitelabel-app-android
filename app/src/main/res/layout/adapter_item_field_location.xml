@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.muzzley.app.cards.FieldLocationContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.gms.maps.MapView
+        android:clickable="false"
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        map:liteMode="true"
+        map:mapType="normal" />
+
+</com.muzzley.app.cards.FieldLocationContainer>

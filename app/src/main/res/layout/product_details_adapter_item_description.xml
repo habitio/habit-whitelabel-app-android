@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:background="@color/white"
+                android:paddingTop="40dp"
+                android:paddingBottom="40dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin">
+
+    <TextView
+        android:id="@+id/product_description_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mobile_cards_product_description_title"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="18sp"
+        android:textColor="#323232"/>
+
+    <TextView
+        android:id="@+id/product_description_text"
+        android:layout_below="@+id/product_description_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Product specs"
+        android:textColor="#323232"/>
+
+</RelativeLayout>

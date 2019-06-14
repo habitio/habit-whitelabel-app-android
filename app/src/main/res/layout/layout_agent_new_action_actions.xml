@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp">
+
+    <View
+        android:id="@+id/small_action_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#99CDD7D9"
+         />
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/ll_img_delete_subaction"-->
+        <!--android:layout_width="@dimen/agents_create_actions_subaction_x_delete_width"-->
+        <!--android:layout_height="match_parent"-->
+
+        <!--android:layout_centerVertical="true">-->
+
+
+
+    <!--</RelativeLayout>-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/small_action_line"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:id="@+id/img_delete_subaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_delete_param" />
+
+        <TextView
+            android:id="@+id/img_subaction_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/img_delete_subaction"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:textColor="@color/add_agent_text_color"
+            android:textSize="12sp"
+            tools:text="Test" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

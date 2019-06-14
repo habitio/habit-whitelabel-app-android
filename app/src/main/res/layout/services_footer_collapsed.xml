@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@+id/scene"
+             android:clipChildren="false"
+
+             android:orientation="vertical"
+             xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             xmlns:tools="http://schemas.android.com/tools">
+
+
+    <LinearLayout
+        android:id="@+id/drawer"
+        android:layout_marginTop="16dp"
+        android:background="#e9f8fb"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/blackish"
+            android:textSize="13sp"
+            android:id="@id/label"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_vertical"
+            tools:text="Don\'t have Vdf Parenting kit ?"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/selector_button_footer"
+            android:text="@string/mobile_add_service_shop"
+            android:textAllCaps="false"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+    <ImageView
+        android:clipChildren="false"
+
+        android:tint="@color/blue"
+        android:id="@+id/collapse"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/circle_blue"
+        android:scaleType="center"
+        android:src="@drawable/icon_expand_arrow"/>
+
+
+</FrameLayout>

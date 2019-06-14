@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="default_layout_horizontal_margin">16dp</dimen>
+    <dimen name="default_layout_vertical_margin">16dp</dimen>
+    <dimen name="default_height">48dp</dimen>
+    <dimen name="default_padding">4dp</dimen>
+    <dimen name="default_image_padding">8dp</dimen>
+    <dimen name="login_bullet_size">7dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="event_list_item_margin">6dp</dimen>
+    <dimen name="event_list_item_time_margin">3dp</dimen>
+    <dimen name="event_list_item_top_margin">25dp</dimen>
+    <dimen name="event_list_item_left_margin">20dp</dimen>
+    <dimen name="event_divider">18dp</dimen>
+    <dimen name="divider">10dp</dimen>
+
+    <!-- sliding menu -->
+    <dimen name="slidingmenu_shadow_width">15dp</dimen>
+    <dimen name="slidingmenu_offset">60dp</dimen>
+
+    <!-- widget -->
+    <dimen name="widget_min_width">250dp</dimen>
+    <dimen name="widget_min_height">110dp</dimen>
+    <!--
+        Refer to App Widget Documentation for margin information
+        http://developer.android.com/guide/topics/appwidgets/index.html#CreatingLayout
+    -->
+    <dimen name="widget_margin">8dp</dimen>
+    <dimen name="widget_shortcut_btn_size">58dp</dimen>
+    <dimen name="widget_shortcut_shadow">62dp</dimen>
+    <dimen name="widget_corner_size">2dp</dimen>
+
+    <fraction name="circle_shadow_radius">7000%p</fraction>
+
+    <!-- workers  -->
+    <dimen name="workers_progress_bar">38dp</dimen>
+    <dimen name="agents_card_margin">8dp</dimen>
+    <dimen name="agents_card_name_margin_left">13dp</dimen>
+    <dimen name="agents_card_name_margin_bottom">8dp</dimen>
+    <dimen name="agents_card_name_text_size">16sp</dimen>
+    <dimen name="agents_card_toggle_margins">11dp</dimen>
+    <dimen name="agents_card_toggle_margin_left">26dp</dimen>
+    <dimen name="agents_card_toggle_helf_margin_left">13dp</dimen>
+    <dimen name="agents_card_description_height">44dp</dimen>
+    <dimen name="agents_card_actions_margin_top">13dp</dimen>
+    <dimen name="agents_card_actions_margin_bottom">8dp</dimen>
+    <dimen name="agents_create_margins">16dp</dimen>
+    <dimen name="agents_create_parents_height">46dp</dimen>
+    <dimen name="agents_create_parents_text_margin">40dp</dimen>
+    <dimen name="agents_create_parents_text_size">17sp</dimen>
+    <dimen name="agents_create_parents_margin_top">25dp</dimen>
+
+    <dimen name="agents_create_actions_subaction_detail_height">30dp</dimen>
+    <dimen name="agents_create_actions_subaction_detail_height2">40dp</dimen>
+    <dimen name="agents_create_actions_subaction_x_delete_width">22dp</dimen>
+
+
+    <!-- device picker  -->
+    <dimen name="device_picker_vertical_line_width">8dp</dimen>
+    <dimen name="device_picker_vertical_line_margin_left">57dp</dimen>
+    <dimen name="device_picker_vertical_line_margin_left_2">41dp</dimen>
+    <dimen name="device_picker_blue_button_plus">61dp</dimen>
+    <dimen name="device_picker_blue_button_plus_inside_padding">18dp</dimen>
+    <dimen name="device_picker_horizontal_margin">16dp</dimen>
+    <dimen name="device_picker_parent_corner_radius">3dp</dimen>
+    <dimen name="device_picker_parent_text">13sp</dimen>
+    <dimen name="device_picker_children_height">60dp</dimen>
+    <dimen name="device_picker_children_space_img_text">15dp</dimen>
+    <dimen name="device_picker_children_image">40dp</dimen>
+    <dimen name="device_picker_search_icon_width">60dp</dimen>
+    <dimen name="device_picker_search_text_size">18sp</dimen>
+
+    <!-- Bottom Sliding Bar -->
+    <dimen name="shadow_size">8dp</dimen>
+    <dimen name="layer_size">123dp</dimen>
+    <dimen name="preview_offset_distance">150dp</dimen>
+    <dimen name="offset_distance_closed">30dp</dimen>
+    <dimen name="offset_distance_opened">23dp</dimen>
+    <dimen name="offset_distance_touch_delegate">50dp</dimen>
+
+    <dimen name="tile_padding">3dp</dimen>
+    <dimen name="tile_min_width">170dp</dimen>
+    <!-- User Feedback Elements -->
+    <dimen name="user_feedback_option_padding">9dp</dimen>
+    <dimen name="user_feedback_option_height">44dp</dimen>
+    <dimen name="user_feedback_option_corner_radius">3dp</dimen>
+    <dimen name="user_feedback_font_size">13sp</dimen>
+    <dimen name="user_feedback_progress_bar">38dp</dimen>
+
+    <dimen name="cardview_default_radius">0dp</dimen> <!-- overrides support library value -->
+    <dimen name="default_corner_radius">3dp</dimen>
+
+    <dimen name="button_radius">40dp</dimen>
+</resources>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by Theme.Muzzley from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="Theme.Muzzley" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+        <!--<item name="android:checkboxStyle">@style/customCheckBoxStyle</item>-->
+        <!--<item name="checkedTextViewStyle">@style/customCheckedTextView</item>-->
+        <!--<item name="listChoiceIndicatorMultiple">@drawable/checkbox</item>-->
+        <item name="android:listChoiceIndicatorMultiple">@drawable/checkbox</item>
+
+    </style>
+
+    <style name="Theme.Muzzley.ActionBar.Transparent" parent="Theme.Muzzley">
+        <item name="android:actionBarStyle">@style/ThemeActionBar</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <!-- Support library compatibility -->
+        <item name="actionBarStyle">@style/ThemeActionBar</item>
+        <item name="windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@drawable/login_background</item>
+
+    </style>
+
+    <style name="ThemeActionBar" parent="Widget.AppCompat.ActionBar.Solid">
+        <item name="android:background">@null</item>
+        <item name="android:displayOptions">homeAsUp</item>
+        <!-- Support library compatibility -->
+        <item name="background">@null</item>
+        <item name="displayOptions">homeAsUp</item>
+    </style>
+
+    <style name="Theme.Muzzley.Toolbar" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_action_clear</item>
+
+        <!--item name="actionModeStyle">@style/ActionModeStyle</item-->
+    </style>
+
+    <style name="Theme.Muzzley.Toolbar.Transparent" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@android:color/transparent</item>
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:textColorSecondary">@color/white</item>
+    </style>
+
+    <style name="Theme.Muzzley.Transparent" parent="Theme.Muzzley">
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+
+    <!-- Muzzley theme. -->
+    <style name="Theme.Muzzley.Light" parent="Theme.Muzzley">
+        <item name="android:actionBarStyle">@style/Muzzley.ActionBar</item>
+        <item name="android:actionMenuTextAppearance">@style/Muzzley.ActionBar</item>
+        <item name="android:actionMenuTextColor">@color/white</item>
+        <item name="android:actionModeBackground">@color/white</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- Support library compatibility -->
+        <item name="actionMenuTextAppearance">@style/Muzzley.ActionBar</item>
+        <item name="actionBarStyle">@style/Muzzley.ActionBar</item>
+        <item name="actionMenuTextColor">@color/selector_white</item>
+    </style>
+
+
+    <style name="ProgressTheme" parent="Theme.AppCompat.Dialog">
+        <item name="colorAccent">@color/blue</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+
+</resources>

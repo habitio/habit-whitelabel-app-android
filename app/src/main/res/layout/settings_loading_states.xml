@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/layout_root"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:background="@color/gray_lighter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <com.muzzley.util.ui.BackgroundFigure
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!--<ImageView-->
+        <!--android:id="@+id/image_loading_state"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@drawable/device_placeholder"-->
+        <!--android:layout_marginTop="100dp" />-->
+    <!--android:layout_below="@+id/image_loading_state"-->
+
+
+    <!--<LinearLayout-->
+        <!--android:layout_marginTop="120dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical"-->
+        <!--android:id="@+id/linearLayout2">-->
+
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/text_title_loading_state"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:textColor="@color/gray"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="@string/hi"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:paddingLeft="22dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:paddingRight="22dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_marginBottom="17dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:textSize="24sp"/>&ndash;&gt;-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/text_subtitle_loading_state"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textColor="@color/gray"-->
+            <!--android:text="@string/loading_settings"-->
+            <!--android:gravity="center"-->
+            <!--android:paddingLeft="22dp"-->
+            <!--android:paddingRight="22dp"-->
+            <!--android:layout_marginBottom="27dp"-->
+            <!--android:textSize="16sp"/>-->
+
+        <!--<ProgressBar-->
+            <!--android:visibility="gone"-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_marginBottom="65dp"/>-->
+
+    <!--</LinearLayout>-->
+
+</RelativeLayout>

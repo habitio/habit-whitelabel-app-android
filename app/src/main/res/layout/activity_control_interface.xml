@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/mainContainer"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/gray_lighter"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/stroke_muzzley"/>
+
+        <ViewStub
+            android:id="@+id/interfaceElement"
+            android:layout="@layout/activity_video_player"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/layout_error"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/error_load_interface"
+                android:textColor="@color/gray_dark"
+                android:visibility="gone"/>
+
+            <FrameLayout
+                android:id="@+id/layout_webview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <WebView
+                    android:id="@+id/webview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:scrollbars="none"/>
+                <ProgressBar
+                    android:id="@+id/loading"
+                    android:visibility="gone"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    />
+            </FrameLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/tiles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:scaleType="centerInside"
+            android:background="@drawable/sliding_layer_indicator_background_opened"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/slidingIndicatorIcon"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:src="@drawable/icon_show_bottom_nav"/>
+
+        <TextView
+            android:id="@+id/layout_loading_devices"
+            android:layout_below="@+id/slidingIndicatorIcon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/mobile_loading"
+            android:textColor="@color/gray_dark"
+            android:visibility="gone"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_channels"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tiles_group_list_background"
+            android:fadeScrollbars="true"
+            android:scrollbars="horizontal"
+            android:layout_below="@+id/slidingIndicatorIcon"
+            android:visibility="visible"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:background="#fff"
+              android:padding="10dp"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <TextView
+        android:text="@string/mobile_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/editText"
+        android:drawableRight="@drawable/ic_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <!--android:background="#ECEFF1"-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"/>
+    <View
+        android:layout_marginTop="-40dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@id/worker_button_next"
+        android:background="@drawable/agent_gradient_shadow_over_finish"/>
+
+    <!--<Button-->
+        <!--android:textColor="@color/white"-->
+        <!--android:background="@drawable/agent_button_finish"-->
+        <!--android:id="@+id/button_done"-->
+        <!--android:text="@string/mobile_done"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_marginRight="30dp"-->
+        <!--android:layout_marginLeft="30dp"-->
+        <!--android:textAllCaps="false"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"/>-->
+
+    <Button
+        android:id="@+id/button_done"
+        style="@style/ButtonFooter"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/mobile_done"/>
+
+
+</LinearLayout>

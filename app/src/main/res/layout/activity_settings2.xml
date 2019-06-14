@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.muzzley.util.ui.MuzzleySwipeRefreshLayout
+    android:id="@+id/swipeRefreshLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ViewFlipper android:id="@+id/viewFlipper"
+                 xmlns:android="http://schemas.android.com/apk/res/android"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent">
+
+        <include
+            layout="@layout/settings_loading_states"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_lighter"
+            android:scrollbars="vertical"/>
+
+        <include
+            layout="@layout/settings_error_states"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"/>
+
+    </ViewFlipper>
+</com.muzzley.util.ui.MuzzleySwipeRefreshLayout>

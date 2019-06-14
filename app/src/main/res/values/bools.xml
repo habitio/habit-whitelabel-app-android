@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="crashlytics_active">true</bool>
+    <bool name="disable_shortcuts">true</bool>
+    <bool name="disable_timeline">false</bool>
+
+</resources>

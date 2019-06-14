@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="90dp"
+    android:layout_height="110dp"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/gray_light"
+            android:layout_marginBottom="9dp" />
+
+        <ImageView
+            android:id="@+id/indicator"
+            android:background="@color/gray_light"
+            android:visibility="visible"
+            android:adjustViewBounds="true"
+            android:gravity="top"
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/indicator"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/image_control_interface_item"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="3dp"
+                android:scaleType="fitXY" />
+            <View
+                android:id="@+id/image_control_interface_item_gradient"
+                android:layout_width="50dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="-27dp"
+                android:background="@drawable/white_gradient"/>
+
+            <TextView
+                android:id="@+id/label_control_interface_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-15dp"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:textColor="@color/blue"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

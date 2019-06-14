@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.muzzley.app.cards.FieldDeviceChoiceContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.greenfrvr.hashtagview.HashtagView
+        android:id="@+id/devices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/default_layout_horizontal_margin"
+        app:rowGravity="left"
+        app:rowMode="wrap"
+        app:tagBackground="@drawable/button_rounded_blue"
+        app:tagDrawableRight="@drawable/ic_action_clear"
+        app:tagPaddingBottom="5dp"
+        app:tagPaddingLeft="10dp"
+        app:tagPaddingRight="5dp"
+        app:tagPaddingTop="5dp"
+        app:tagTextColor="#fff"
+        app:tagTextSize="12sp"
+        app:tagTextGravity="center" />
+
+    <Button
+        android:layout_marginLeft="@dimen/default_layout_horizontal_margin"
+        android:id="@+id/button_add_device"
+        style="@style/ButtonRoundedWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:drawableLeft="@drawable/icon_plus"
+        android:drawablePadding="10dp"
+        android:text="@string/mobile_device_add"
+        android:textColor="@color/add_agent_text_color"
+        android:layout_gravity="left"
+        />
+
+
+</com.muzzley.app.cards.FieldDeviceChoiceContainer>

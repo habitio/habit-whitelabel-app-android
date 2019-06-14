@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:padding="30dp"
+        android:text="@string/mobile_service_color_selection_text"/>
+
+    <FrameLayout
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btn_blue"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/circle_shape"
+            android:gravity="center"
+            android:text="@string/mobile_blue"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="23sp"
+            android:lines="1"
+            app:backgroundTint="@color/blue"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/checked_blue"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="top|end"
+            android:layout_margin="5dp"
+            android:background="@drawable/circle_shape"
+            android:src="@drawable/check_outline"
+            android:tint="@color/blue"
+            android:visibility="gone"
+            app:backgroundTint="@color/white"/>
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="8dp"
+        android:text="@string/mobile_or"
+        android:textSize="26sp"/>
+
+    <FrameLayout
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btn_red"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/circle_shape"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/mobile_red"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="23sp"
+            android:lines="1"
+            app:backgroundTint="@color/red"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/checked_red"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="top|end"
+            android:layout_margin="5dp"
+            android:background="@drawable/circle_shape"
+            android:src="@drawable/check_outline"
+            android:tint="@color/red"
+            android:visibility="gone"
+            app:backgroundTint="@color/white"/>
+    </FrameLayout>
+
+    <ViewFlipper
+        android:id="@+id/view_flipper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp"
+        android:gravity="bottom">
+
+        <Button
+            android:id="@+id/button_try_again"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="@drawable/selector_button_outline_blue"
+            android:text="@string/mobile_send_color_instructions"
+            android:textAllCaps="false"
+            android:textColor="@color/blue"/>
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_button_footer"
+            android:text="@string/mobile_next"
+            android:textAllCaps="false"
+            android:textColor="@color/white"/>
+
+    </ViewFlipper>
+
+
+</LinearLayout>

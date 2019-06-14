@@ -1,0 +1,252 @@
+//apply from: '../custom.gradle'
+
+//def gitSha = 'git rev-parse --short HEAD'.execute([], project.rootDir).text.trim()
+def buildTime = new Date().format("yyyy-MM-dd'T'HH:mmZ", TimeZone.getTimeZone("UTC"))
+def gmsVersion = '16.0.0'
+
+apply plugin: 'com.android.application'
+//apply plugin: 'io.fabric'
+apply plugin: 'kotlin-android'
+//apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+
+    implementation 'androidx.vectordrawable:vectordrawable-animated:1.0.0'
+    implementation 'androidx.exifinterface:exifinterface:1.0.0'
+    //added because of SocialLoginManager
+    implementation 'androidx.browser:browser:1.0.0'
+    implementation 'androidx.vectordrawable:vectordrawable-animated:1.0.0'
+    implementation "com.google.android.gms:play-services-plus:$gmsVersion"
+    implementation "com.google.android.gms:play-services-location:$gmsVersion"
+    implementation "com.google.android.gms:play-services-maps:16.1.0"
+    implementation 'com.google.android.libraries.places:places:1.1.0'
+    implementation "com.google.android.gms:play-services-auth:16.0.1"
+    implementation 'com.google.firebase:firebase-core:16.0.9'
+    implementation 'com.microsoft.azure:notification-hubs-android-sdk:0.6@aar'
+
+    //    wearApp project(':wearable')
+//    implementation('com.crashlytics.sdk.android:crashlytics:2.10.0@aar') {
+//        transitive = true
+//    }
+    implementation 'androidx.multidex:multidex:2.0.1'
+    androidTestImplementation 'androidx.multidex:multidex:2.0.1'
+    androidTestImplementation 'androidx.multidex:multidex-instrumentation:2.0.0'
+
+	implementation 'com.google.dagger:dagger:2.22.1'
+	annotationProcessor 'com.google.dagger:dagger-compiler:2.22.1'
+    compileOnly 'org.glassfish:javax.annotation:10.0-b28'
+
+    implementation('com.squareup.picasso:picasso:2.71828'){
+        transitive = true
+    }
+
+    implementation 'com.jakewharton:butterknife:10.1.0'
+	annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+    implementation 'com.squareup:otto:1.3.8'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+    implementation 'com.squareup.okio:okio:2.2.2'
+    implementation 'com.github.greenfrvr:hashtag-view:1.2.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.8'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.2.0'
+    implementation 'com.github.jimcoven:jcropimageview:0.22'
+    implementation 'com.makeramen:roundedimageview:2.2.1'
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar'
+//    implementation 'pl.charmas.android:android-reactive-location:0.9@aar'
+    implementation 'com.patloew.rxlocation:rxlocation:1.0.3'
+    implementation 'me.relex:circleindicator:1.2.2@aar'
+    implementation 'tv.danmaku.ijk.media:ijkplayer-java:0.8.2'
+    implementation 'info.hoang8f:android-segmented:1.0.6'
+    implementation 'com.github.deano2390:MaterialShowcaseView:1.2.0'
+    implementation 'org.fusesource.mqtt-client:mqtt-client:1.15'
+    implementation 'me.saket:better-link-movement-method:1.2' // clickable links in textviews
+    implementation ('com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.11.0@aar'){
+        transitive=true
+    }
+    implementation 'saschpe.android:customtabs:2.0.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+//    kapt "com.google.dagger:dagger-compiler:2.13"
+
+    implementation ('com.theneura:android-sdk:5.4.0') {
+        exclude group: "com.google.android.gms"
+        exclude group: "com.google.firebase"
+    }
+    implementation 'com.google.firebase:firebase-messaging:18.0.0'
+    implementation "com.google.android.gms:play-services-awareness:$gmsVersion"
+
+    implementation 'com.firebase:firebase-jobdispatcher:0.8.5'
+    implementation 'com.patloew.rxawareness:rxawareness:1.0.0'
+//    compile project(":core")
+//    implementation project(path: ':core', configuration: 'default')
+//    implementation project(path: ':analytics', configuration: 'default')
+//    implementation project(":analytics")
+    implementation 'com.mixpanel.android:mixpanel-android:5.6.1'
+
+}
+
+android {
+
+    useLibrary 'android.test.runner'
+    useLibrary 'android.test.base'
+    useLibrary 'android.test.mock'
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+
+    compileSdkVersion Integer.parseInt(project.ANDROID_BUILD_SDK_VERSION)
+
+    defaultConfig {
+
+        vectorDrawables.useSupportLibrary = true
+        minSdkVersion Integer.parseInt(project.ANDROID_BUILD_MIN_SDK_VERSION)
+        targetSdkVersion Integer.parseInt(project.ANDROID_BUILD_TARGET_SDK_VERSION)
+        versionName 'MAJOR MINOR PATCH'.split().collect {
+            project["APPLICATION_VERSION_$it"]
+        }.join('.')
+        versionCode 'MAJOR MINOR PATCH BUILD'.split().inject(0) { acc, i -> acc * 100 + (project["APPLICATION_VERSION_$i"] as int) }
+
+        buildConfigField "String", "BUILD_TIME", "\"${buildTime}\""
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        debug {}
+        muzzley {}
+    }
+
+    flavorDimensions "default"
+
+    productFlavors {
+        muzzley {
+            applicationId 'com.muzzley'
+            resValue "string", "analytics_application_name", "Muzzley"
+            resValue "string", "copyright_company_name", "Habit Analytics, Inc."
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            applicationIdSuffix = '.dev'
+            versionNameSuffix = '-DEV'
+            signingConfig signingConfigs.debug
+            ext.betaDistributionGroupAliases="dev"
+            ext.betaDistributionReleaseNotesFilePath="release_notes.txt"
+        }
+
+        integrations {
+            debuggable true
+            minifyEnabled false
+            applicationIdSuffix = '.int'
+            versionNameSuffix = '-INT'
+            signingConfig signingConfigs.debug
+            ext.betaDistributionGroupAliases="android-dev"
+            ext.betaDistributionReleaseNotesFilePath="release_notes.txt"
+        }
+
+        qa {
+            debuggable true
+            applicationIdSuffix = '.qa'
+            versionNameSuffix = '-QA'
+            signingConfig signingConfigs.debug
+            ext.betaDistributionGroupAliases="qa"
+            ext.betaDistributionReleaseNotesFilePath="release_notes.txt"
+        }
+
+        staging {
+            debuggable true
+            applicationIdSuffix = '.stag'
+            versionNameSuffix = '-STAG'
+            signingConfig signingConfigs.debug
+            ext.betaDistributionGroupAliases="android-dev"
+            ext.betaDistributionReleaseNotesFilePath="release_notes.txt"
+        }
+
+        production {
+            debuggable true
+            applicationIdSuffix = '.prod'
+            versionNameSuffix = '-PROD'
+            signingConfig signingConfigs.debug
+            ext.betaDistributionGroupAliases="qa"
+            ext.betaDistributionReleaseNotesFilePath="release_notes.txt"
+        }
+
+        release {
+            debuggable ((project.findProperty("APPLICATION_DEBUG") ?: false ) as Boolean)
+            android.productFlavors.each {
+                def name = it.name
+                android.productFlavors."$name".signingConfig signingConfigs."$name"
+            }
+            ext.betaDistributionGroupAliases="android-prod"
+            ext.betaDistributionReleaseNotesFilePath="release_notes.txt"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+
+        applicationVariants.all { variant ->
+            variant.outputs.all { output ->
+                outputFileName = "${variant.name}-${variant.versionName}-${variant.versionCode}.apk"
+            }
+        }
+    }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    dexOptions {
+        preDexLibraries = true
+        javaMaxHeapSize "4g"
+    }
+
+//    sourceSets {
+//        androidTest.setRoot('src/test')
+//    }
+
+}
+
+android.signingConfigs.each {
+    def name = it.name
+    def propFile = new File(name+'.properties')
+//    println "can read $name: ${propFile.canRead()} ${propFile.absolutePath}"
+    if (propFile.canRead()) {
+        def Properties props = new Properties()
+        props.load(new FileInputStream(propFile))
+        if (['STORE_FILE','STORE_PASSWORD','KEY_ALIAS','KEY_PASSWORD'].every { props.containsKey(it)}) {
+            android.signingConfigs."$name".storeFile = file("../${props['STORE_FILE']}")
+            android.signingConfigs."$name".storePassword = props['STORE_PASSWORD']
+            android.signingConfigs."$name".keyAlias = props['KEY_ALIAS']
+            android.signingConfigs."$name".keyPassword = props['KEY_PASSWORD']
+        } else {
+            println "${name}.properties found but some entries are missing. Setting android.buildTypes.${name}.signingConfig = null"
+            android.buildTypes."$name".signingConfig = null
+        }
+    } else {
+        println "${name}.properties not found. Setting android.buildTypes.${name}.signingConfig = null"
+        //android.buildTypes."$name".signingConfig = null
+    }
+}
+
+apply plugin: 'com.google.gms.google-services'
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.muzzley.util.ui.OAuthView2 android:id="@+id/oauthView"
+                               xmlns:android="http://schemas.android.com/apk/res/android"
+                               android:windowSoftInputMode="adjustResize"
+                               android:layout_width="match_parent"
+                               android:layout_height="match_parent">
+
+    <WebView
+        android:id="@+id/webview"
+        android:windowSoftInputMode="adjustResize"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ProgressBar
+        android:windowSoftInputMode="adjustResize"
+        android:id="@+id/progress_bar"
+        android:layout_width="@dimen/default_height"
+        android:layout_height="@dimen/default_height"
+        android:layout_centerInParent="true"/>
+
+
+</com.muzzley.util.ui.OAuthView2>

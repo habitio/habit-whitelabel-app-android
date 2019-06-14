@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_opacity_80"
+    android:clickable="true">
+
+    <ProgressBar
+        android:id="@+id/progress_agent_being_testes"
+        android:layout_width="@dimen/workers_progress_bar"
+        android:layout_height="@dimen/workers_progress_bar"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progress_agent_being_testes"
+        android:text="@string/mobile_worker_executing_text"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

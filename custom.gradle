@@ -1,0 +1,22 @@
+['APPLICATION_VERSION_MAJOR', 'APPLICATION_VERSION_MINOR',
+ 'APPLICATION_VERSION_PATCH', 'APPLICATION_VERSION_BUILD'
+].each() { key ->
+  if (!project.hasProperty(key)) {
+    project.ext[key] = null
+  }
+}
+
+
+def extPropertiesFromFile(String source) {
+  def properties = new Properties()
+  def propertiesFile = file(source)
+  if (propertiesFile.canRead()) {
+    properties.load(new FileInputStream(propertiesFile))
+    for (Map.Entry property in properties) {
+      project.ext[property.key] = property.value
+    }
+  }
+}
+
+extPropertiesFromFile('../build.properties')
+

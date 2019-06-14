@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+    <string name="workers_url">https://site.staging.muzzley.com/worker-editor-v3/</string>
+    <string name="site_url">https://site.staging.muzzley.com</string>
+    <string name="fibaro_smoke_profile_id">5e114892-bb34-11e7-b536-6e8e8fac3ec8</string>
+    <string name="api_base_url">https://api.platform.qa.muzzley.com</string>
+
+</resources>

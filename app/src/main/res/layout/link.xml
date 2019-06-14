@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.muzzley.app.userprofile.LinkContainer xmlns:android="http://schemas.android.com/apk/res/android"
+                                           android:layout_width="match_parent"
+                                           android:textColor="@color/blue"
+                                           android:background="@color/white"
+                                           android:padding="@dimen/default_layout_horizontal_margin"
+                                           android:layout_height="wrap_content"/>

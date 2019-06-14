@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="178dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginLeft="@dimen/agent_card_margins_left_right"
+    android:layout_marginRight="@dimen/agent_card_margins_left_right"
+    android:layout_marginTop="@dimen/agent_card_margins_top"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="1dp">
+
+    <ViewFlipper
+        android:id="@+id/main_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/agent_card_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:foreground="@drawable/selector_agent_card"
+            >
+
+            <ImageView
+                android:id="@+id/agent_img_trigger"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="-2dp"
+                android:background="@drawable/agent_card_background"
+                android:scaleType="fitStart"
+                tools:src="@drawable/withings_bodyscale"/>
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/agent_img_missing_capabilities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:src="@drawable/constraint_cue"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="bottom">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/white_gradient"/>
+
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/agent_small_arrow_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="70dp"
+                    android:src="@drawable/icon_card_arrow"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <!--sem este container as vezes o texto mara, nao mostra desde o inicio e corta o texto a meio-->
+                    <LinearLayout
+                        android:id="@+id/description_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/agents_card_description_height"
+                        android:baselineAligned="false"
+                        >
+
+                        <TextView
+                            android:id="@+id/agent_description"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/agents_card_description_height"
+                            android:layout_marginRight="50dp"
+                            android:ellipsize="end"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="bottom"
+                            android:maxLines="2"
+                            android:visibility="invisible"
+                            tools:visbility="visible"
+                            tools:text="teste"
+                            android:textColor="@color/device_picker_parent_text"
+                            android:textSize="13sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/agent_imgs_actions"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@id/description_container"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginTop="@dimen/agents_card_actions_margin_top"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/agent_rl_actions"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            >
+
+                            <ImageView
+                                android:id="@+id/img_action_one"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:translationZ="1dp"/>
+
+                            <ImageView
+                                android:id="@+id/img_action_two"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="-16dp"
+                                android:layout_toEndOf="@id/img_action_one"
+                                android:layout_toRightOf="@id/img_action_one"/>
+
+                            <ImageView
+                                android:id="@+id/img_action_three"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="-16dp"
+                                android:layout_toEndOf="@id/img_action_two"
+                                android:layout_toRightOf="@id/img_action_two"/>
+
+                            <TextView
+                                android:id="@+id/img_action_more"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="-8dp"
+                                android:layout_toEndOf="@id/img_action_three"
+                                android:layout_toRightOf="@id/img_action_three"
+                                android:background="@drawable/circle"
+                                android:gravity="center"
+                                android:textColor="#99A7AA"
+                                android:textSize="14sp"/>
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/agent_card_state_ll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/agent_small_arrow_two"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="14dp"
+                                android:layout_marginRight="14dp"
+                                android:src="@drawable/icon_card_arrow"/>
+
+                            <RelativeLayout
+                                android:id="@+id/agent_rl_conditions"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <!--ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:src="@drawable/icon_location_agent"/-->
+
+                                <ImageView
+                                    android:id="@+id/img_state_one"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"/>
+
+                                <ImageView
+                                    android:id="@+id/img_state_two"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_marginLeft="-16dp"
+                                    android:layout_marginStart="-16dp"
+                                    android:layout_toEndOf="@id/img_state_one"
+                                    android:layout_toRightOf="@id/img_state_one"/>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/agent_last_time_executed"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/agent_imgs_actions"
+                        android:layout_marginRight="@dimen/device_picker_parent_text"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLines="2"
+                        tools:text="Last executed on 20 April, at 22:00pm"
+                        android:textColor="@color/device_picker_parent_text"
+                        android:textSize="11sp"
+                        android:textStyle="italic"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <com.muzzley.util.ui.triStateToggle.TriStateToggle
+                    android:id="@+id/toggle_agent_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="11dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="8dp"
+                    android:paddingBottom="8dp"
+                    app:measureFactor="2"
+                    app:offDrawable="@drawable/shape_toggle_back_off"
+                    app:onDrawable="@drawable/shape_toggle_back_on"
+                    app:thumbDrawable="@drawable/shape_thumb"
+                    app:undefDrawable="@drawable/shape_toggle_back_undef"/>
+
+                <ImageView
+                    android:id="@+id/preview_agent_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@id/toggle_agent_card"
+                    android:background="@drawable/selector_grey_small_icons"
+                    android:clickable="true"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="11dp"
+                    android:paddingRight="11dp"
+                    android:paddingTop="6dp"
+                    android:src="@drawable/icon_execute_agent"/>
+
+                <ImageView
+                    android:id="@+id/remove_agent_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="11dp"
+                    android:layout_toLeftOf="@id/preview_agent_card"
+                    android:background="@drawable/selector_grey_small_icons"
+                    android:clickable="true"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="11dp"
+                    android:paddingRight="11dp"
+                    android:paddingTop="6dp"
+                    android:src="@drawable/icon_delete_agent"/>
+
+                <TextView
+                    android:id="@+id/name_agent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_toLeftOf="@id/remove_agent_card"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif"
+                    android:maxLines="2"
+                    android:paddingBottom="8dp"
+                    tools:text="Going to bed "
+                    android:textColor="@color/blackish"
+                    android:textSize="@dimen/agents_card_name_text_size"
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <include layout="@layout/agent_not_editable"/>
+
+    </ViewFlipper>
+
+    <ViewFlipper
+        android:id="@+id/overlays"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <include layout="@layout/worker_force_disabled"/>
+
+        <include layout="@layout/agent_is_compromised"/>
+
+        <include
+            android:id="@+id/agent_card_unable_because_capabilities"
+            layout="@layout/agent_unable_because_capabilities"
+            android:visibility="gone"/>
+
+        <include layout="@layout/agents_location_disabled"/>
+        <include
+            android:id="@+id/agents_insufficient_permissions"
+            layout="@layout/agents_insufficient_permissions"
+            android:visibility="gone"/>
+
+        <include
+            android:id="@+id/agent_card_include_layout_being_tested"
+            layout="@layout/agent_being_tested"
+            android:visibility="gone"/>
+
+        <include
+            android:id="@+id/agent_card_include_layout_works_ok"
+            layout="@layout/agent_works_ok"
+            android:visibility="gone"/>
+
+        <include
+            android:id="@+id/agent_card_include_layout_unable_to_work"
+            layout="@layout/agent_is_unable_to_work"
+            android:visibility="gone"/>
+
+        <View
+            android:id="@+id/agents_card_transparent_disable_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_opacity_10"
+            android:visibility="visible"/>
+
+    </ViewFlipper>
+
+
+</androidx.cardview.widget.CardView>

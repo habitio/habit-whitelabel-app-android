@@ -1,0 +1,9 @@
+<resources>
+  <dimen name="home_button_padding">32dp</dimen>
+  <dimen name="home_layout_button_padding">8dp</dimen>
+  <dimen name="login_button_size">96dp</dimen>
+  <dimen name="home_button_size">128dp</dimen>
+  <dimen name="reader_target_size">180dp</dimen>
+  <dimen name="worker_button_label_padding">0dp</dimen>
+  <dimen name="button_blank_state_width">240dp</dimen>
+</resources>

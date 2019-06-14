@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/agent_not_editable_layout"
+    android:layout_width="match_parent"
+    android:layout_height="178dp"
+    android:background="@color/white_opacity_95"
+    android:clickable="true"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:padding="@dimen/default_layout_horizontal_margin"
+        android:id="@+id/category_not_editable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Category"
+        android:fontFamily="sans-serif-medium"
+        android:textAllCaps="true"
+        style="@style/TextAppearanceMicro"
+        />
+    <ImageView
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:id="@+id/categoryImage"
+        android:layout_below="@+id/category_not_editable"
+        android:layout_width="53dp"
+        android:layout_height="53dp"/>
+
+    <ImageView
+        android:layout_margin="10dp"
+        android:id="@+id/clientImage"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitEnd"
+        android:layout_width="53dp"
+        android:layout_height="53dp"/>
+    <TextView
+        android:id="@+id/label_not_editable"
+        android:paddingLeft="@dimen/default_layout_horizontal_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/category_not_editable"
+        tools:text="Label"
+        android:layout_toRightOf="@+id/categoryImage"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif"
+        android:maxLines="2"
+        android:textColor="@color/blackish"
+        android:textSize="@dimen/agents_card_name_text_size"
+        />
+
+
+    <TextView
+        android:layout_alignLeft="@+id/label_not_editable"
+        android:id="@+id/description_not_editable"
+        android:paddingLeft="@dimen/default_layout_horizontal_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_not_editable"
+        tools:text="Description"
+        android:maxLines="2"
+        android:ellipsize="end"
+
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/device_picker_parent_text"
+        android:textSize="13sp"/>
+
+        />
+
+    <TextView
+        android:id="@+id/agent_last_time_executed_not_editable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="@dimen/default_layout_horizontal_margin"
+        android:layout_alignParentBottom="true"
+        android:ellipsize="end"
+        android:maxLines="2"
+        tools:text="Last executed on 20 April, at 22:00pm"
+        android:textColor="@color/device_picker_parent_text"
+        style="@style/Micro"
+        />
+
+    <com.muzzley.util.ui.triStateToggle.TriStateToggle
+        android:id="@+id/toggle_agent_card_not_editable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="8dp"
+        android:paddingBottom="8dp"
+        app:measureFactor="2"
+        app:offDrawable="@drawable/shape_toggle_back_off"
+        app:onDrawable="@drawable/shape_toggle_back_on"
+        app:thumbDrawable="@drawable/shape_thumb"
+        app:undefDrawable="@drawable/shape_toggle_back_undef"/>
+
+    <ImageView
+        android:id="@+id/remove_agent_card_not_editable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@id/toggle_agent_card_not_editable"
+        android:layout_alignWithParentIfMissing="true"
+        android:background="@drawable/selector_grey_small_icons"
+        android:clickable="true"
+        android:paddingBottom="12dp"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:paddingTop="6dp"
+        android:src="@drawable/icon_delete_agent"/>
+
+</RelativeLayout>

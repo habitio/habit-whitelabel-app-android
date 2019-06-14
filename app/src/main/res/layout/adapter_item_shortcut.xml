@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:clipChildren="false">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <RelativeLayout
+            android:id="@+id/image_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:clipToPadding="false"
+            android:clipChildren="false">
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="@dimen/widget_shortcut_shadow"
+                android:layout_height="@dimen/widget_shortcut_shadow"
+                android:layout_alignTop="@+id/bg_shortcut"
+                android:layout_marginLeft="-2dp"
+                android:layout_marginTop="-2dp"
+                android:indeterminate="true"
+                android:indeterminateDrawable="@drawable/loader"
+                android:visibility="visible" />
+
+            <View
+                android:id="@+id/bg_shadow"
+                android:layout_width="@dimen/widget_shortcut_shadow"
+                android:layout_height="@dimen/widget_shortcut_shadow"
+                android:layout_alignTop="@+id/bg_shortcut"
+                android:layout_marginLeft="-2dp"
+                android:layout_marginTop="-2dp"
+                android:background="@drawable/shortcut_shadow" />
+
+            <ImageView
+                android:id="@+id/bg_shortcut"
+                android:layout_width="@dimen/widget_shortcut_btn_size"
+                android:layout_height="@dimen/widget_shortcut_btn_size"
+                android:layout_below="@+id/btn_remove"
+                android:layout_marginTop="-26dp"
+                android:src="@drawable/circle_shape"/>
+
+            <ImageButton
+                android:id="@+id/btn_execute"
+                android:layout_width="@dimen/widget_shortcut_btn_size"
+                android:layout_height="@dimen/widget_shortcut_btn_size"
+                android:layout_alignTop="@+id/bg_shortcut"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_arrow" />
+
+            <TextView
+                android:id="@+id/text_done"
+                android:layout_width="@dimen/widget_shortcut_btn_size"
+                android:layout_height="@dimen/widget_shortcut_btn_size"
+                android:layout_alignTop="@+id/bg_shortcut"
+                android:gravity="center"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/white"
+                android:text="@string/mobile_done"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/btn_remove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/bg_shortcut"
+                android:layout_marginLeft="-26dp"
+                android:padding="5dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_delete" />
+
+            <ImageView
+                android:id="@+id/icon_show_on_watch"
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_toRightOf="@+id/bg_shortcut"
+                android:layout_below="@+id/bg_shortcut"
+                android:layout_marginLeft="-19dp"
+                android:layout_marginTop="-19dp"
+                android:background="@drawable/shortcut_watch_icon_circle"
+                android:scaleType="center"
+                android:src="@drawable/ic_clock" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/shortcut_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/image_container"
+            android:paddingLeft="10dp"
+            android:fontFamily="sans-serif-light"
+            android:lines="1"
+            android:ellipsize="end"
+            android:textColor="@color/blackish"
+            android:textSize="18sp"
+            tools:text="Title" />
+
+        <ImageButton
+            android:id="@+id/btn_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/background_btn_edit"
+            android:src="@drawable/ic_edit" />
+    </RelativeLayout>
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/device_picker_parent_background"
+        tools:background="@android:color/black" />
+</LinearLayout>

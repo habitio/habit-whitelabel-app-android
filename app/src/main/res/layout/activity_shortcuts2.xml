@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.muzzley.util.ui.MuzzleySwipeRefreshLayout
+    android:id="@+id/swipeRefreshLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/shortcut_activity_background"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/showLess"
+            style="@style/TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:padding="10dp"
+            android:text="@string/mobile_show_less"/>
+
+        <ViewFlipper android:id="@+id/view_flipper"
+                     xmlns:android="http://schemas.android.com/apk/res/android"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                tools:listitem="@layout/shortcut_horizontal"
+                app:layoutManager="LinearLayoutManager"
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_lighter"
+                android:scrollbars="vertical"/>
+
+            <TextView
+                android:gravity="center"
+                android:text="@string/no_shortcuts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:gravity="center"
+                android:text="@string/mobile_error_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+            <TextView
+                android:gravity="center"
+                android:text="@string/mobile_loading"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </ViewFlipper>
+
+    </LinearLayout>
+
+</com.muzzley.util.ui.MuzzleySwipeRefreshLayout>

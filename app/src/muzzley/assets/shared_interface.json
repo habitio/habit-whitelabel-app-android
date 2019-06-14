@@ -1,0 +1,10 @@
+{
+	"google_maps_web_key": "REPLACEME",
+	"application_name" : "Muzzley",
+	"primary_color" : "#DB001B",
+	"primary_color_text" : "#FFFFFF",
+	"secondary_color" : "#10B5D8",
+	"secondary_color_text" : "#FFFFFF",
+	"complementary_color" : "#10B5D8",
+	"complementary_color_text" : "#FFFFFF"
+}

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.muzzley.util.ui.SquareCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_device_card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="2dp"
+    android:background="@android:color/white"
+    >
+    <!--card_view:cardCornerRadius="2dp"-->
+    <ImageView
+        android:id="@+id/image_background_device_card"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <ImageView
+        android:id="@+id/ivOverlay"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <View
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/white_gradient" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_margin="8dp"
+        android:orientation="vertical">
+
+        <com.muzzley.util.ui.IconTextView
+            tools:text="A"
+            android:id="@+id/textTop"
+            android:layout_gravity="end"
+            android:gravity="end"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginBottom="2dp"/>
+
+
+        <LinearLayout
+            android:id="@+id/group_1_device_card"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="end"
+            android:layout_marginBottom="6dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_gravity="end"
+                android:text="@string/no_info"
+                android:fontFamily="sans-serif-light"
+                android:id="@+id/textTitleGroup1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:maxLength="8"
+                android:textColor="@color/blackish"
+                android:textSize="21sp"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:orientation="horizontal">
+
+                <TextView
+                    tools:text="D"
+                    android:fontFamily="sans-serif-condensed"
+                    android:id="@+id/textSubtitleGroup1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:singleLine="true"
+                    android:maxLength="25"
+                    android:textColor="@color/grey_standard_2"
+                    android:textSize="9sp"/>
+
+                <TextView
+                    tools:text="(C)"
+
+                    android:id="@+id/textSmallGroup1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:textStyle="bold"
+                    android:textSize="9sp"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/group_2_device_card"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="@string/no_info"
+                android:fontFamily="sans-serif-light"
+                android:layout_gravity="end"
+                android:id="@+id/textTitleGroup2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:maxLength="8"
+                android:textColor="@color/blackish"
+                android:textSize="21sp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:orientation="horizontal">
+
+                <TextView
+                    tools:text="G"
+                    android:fontFamily="sans-serif-condensed"
+                    android:id="@+id/textSubtitleGroup2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:maxLines="1"
+                    android:maxLength="25"
+                    android:textColor="@color/grey_standard_2"
+                    android:textSize="9sp"/>
+
+                <TextView
+                    tools:text="(F)"
+                    android:textStyle="bold"
+                    android:id="@+id/textSmallGroup2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:maxLines="1"
+                    android:textSize="9sp"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            tools:text="H"
+            android:fontFamily="sans-serif-light"
+            android:id="@+id/textTitle"
+            android:gravity="bottom"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:ellipsize="marquee"
+            android:maxLines="2"/>
+
+        <com.muzzley.util.ui.triStateToggle.TriStateToggle
+            android:id="@+id/triStateToggle"
+            app:measureFactor="2"
+            android:visibility="gone"
+            app:onDrawable="@drawable/shape_toggle_back_on"
+            app:offDrawable="@drawable/shape_toggle_back_off"
+            app:undefDrawable="@drawable/shape_toggle_back_undef"
+            app:thumbDrawable="@drawable/shape_thumb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"/>
+
+    </LinearLayout>
+
+</com.muzzley.util.ui.SquareCardView>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+    <!-- the following must not be changed or translated, or else On Boardings will show again -->
+    <string name="on_boarding_shortcuts">Shortcuts List</string>
+    <string name="on_boarding_group_create">Create Group</string>
+    <string name="on_boarding_cards">Cards</string>
+    <string name="on_boarding_agent_builder">Worker Construction</string>
+    <string name="on_boarding_new_group">Group Created</string>
+    <string name="on_boarding_new_agent">Worker Created</string>
+    <string name="on_boarding_new_tile">Tile Added</string>
+    <string name="on_boarding_new_tile_groups">Tile Added &amp; Create Group</string>
+    <string name="on_boarding_add_device">Add device</string>
+
+</resources>

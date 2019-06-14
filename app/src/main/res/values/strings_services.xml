@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+    <string name="site_url">https://www.muzzley.com/</string>
+    <string name="api_base_url">https://api.platform.muzzley.com</string>
+    <string name="workers_url">https://www.muzzley.com/worker-editor-v3/</string>
+    <string name="cdn_url">https://cdn.muzzley.com/</string>
+
+    <!-- to be overriden by brand -->
+    <string name="copyright_start_year">2013</string>
+    <string name="maps_key">@string/google_api_key</string>
+
+    <!--<string name="app_open_scheme">muzzley://</string>-->
+    <!-- must be empty in main. This gets overridden in flavors -->
+    <string name="faq_url"/>
+    <string name="profile_social_facebook"/>
+    <string name="profile_social_twitter"/>
+    <string name="profile_social_blog"/>
+    <string name="about_terms_conditions_url"/>
+    <string name="about_privacy_policy_url"/>
+
+    <string name="fibaro_smoke_profile_id">2be2fcd6-bdb3-11e7-b55c-066268605eec</string>
+    <string name="fibaro_motion_profile_id">fake_fibaro_motion_profile_id</string>
+
+    <!-- to be overriden by brand build -->
+    <string name="start_title">TITLE TO BE REPLACED BY SELFCARE</string>
+    <string name="start_text"><![CDATA[TEXT TO BE REPLACED by<br/><b>SELFCARE</b>]]></string>
+</resources>

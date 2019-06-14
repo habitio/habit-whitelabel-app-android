@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+    <string name="site_url">https://site.develop.muzzley.com/</string>
+    <string name="api_base_url">https://api.platform.integrations.muzzley.com</string>
+    <string name="workers_url">https://site.develop.muzzley.com/worker-editor-v3/</string>
+    <string name="webview_base_url">http://site.develop.muzzley.com/widgets/%s/raw</string>
+</resources>

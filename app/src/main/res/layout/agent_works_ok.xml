@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_opacity_80"
+    android:clickable="true">
+
+    <ImageView
+        android:id="@+id/agent_works_ok_img"
+        android:layout_width="@dimen/workers_progress_bar"
+        android:layout_height="@dimen/workers_progress_bar"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/icon_ok_check"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/agent_works_ok_img"
+        android:text="@string/mobile_worker_executed_text"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

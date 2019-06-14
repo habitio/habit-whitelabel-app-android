@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/add_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/abc_action_bar_default_height_material"
+                android:background="@color/white"
+                >
+                <View
+                    android:id="@+id/fake"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:padding="17dp"
+                    android:visibility="invisible"
+                    android:layout_width="180dp"
+                    android:layout_height="30dp"
+                    />
+
+                <ImageButton
+                    android:id="@+id/buttonAdd"
+                    android:visibility="invisible"
+                    tools:visibility="visible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/white"
+                    android:padding="17dp"
+                    android:src="@drawable/icon_plus"/>
+
+                <com.muzzley.util.ui.SegmentsContainer
+                    android:id="@+id/segmentedGroup"
+                    android:layout_toRightOf="@id/buttonAdd"
+                    android:layout_toLeftOf="@+id/group"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    />
+                <Button
+                    android:id="@+id/button_add_device"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    style="@style/ButtonRoundedWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/icon_plus"
+                    android:drawablePadding="10dp"
+                    android:text="@string/mobile_device_add"
+                    android:textColor="@color/add_agent_text_color"
+                    />
+
+                <ImageButton
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/white"
+                    android:padding="17dp"
+                    android:visibility="invisible"
+                    tools:visibility="visible"
+                    android:src="@drawable/icon_group"/>
+            </RelativeLayout>
+
+            <!--</LinearLayout>-->
+
+
+
+
+            <com.muzzley.util.ui.MuzzleySwipeRefreshLayout
+                android:id="@+id/swipeRefresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/add_layout">
+
+                <ViewFlipper android:id="@+id/viewFlipper"
+                         xmlns:android="http://schemas.android.com/apk/res/android"
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent">
+
+                    <include
+                        android:id="@+id/layout_loading_state"
+                        layout="@layout/tiles_layout_loading_states"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"/>
+
+                    <include
+                        layout="@layout/tiles_layout_blank_states"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"/>
+                    <include
+                        layout="@layout/services_layout_blank_states"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray_lighter"
+                        android:paddingLeft="@dimen/tiles_right_left_margin"
+                        android:paddingRight="@dimen/tiles_right_left_margin"/>
+
+                    <include
+                        android:id="@+id/layout_error_state"
+                        layout="@layout/tiles_layout_error_states"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"/>
+
+                </ViewFlipper>
+            </com.muzzley.util.ui.MuzzleySwipeRefreshLayout>
+
+            <View
+                android:id="@+id/shadow_bellow_header"
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:layout_below="@id/add_layout"
+                android:background="@drawable/agent_gradient_shadow_new"
+                android:elevation="2dp"/>
+
+        </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/group_menu_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+</RelativeLayout>

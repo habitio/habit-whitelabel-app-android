@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="Muzzley.ActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:titleTextStyle">@style/MuzzleyActionBarTitleText</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:textSize">15sp</item>
+
+        <!-- Support library compatibility -->
+        <item name="android:displayOptions"/>
+        <item name="background">@color/colorPrimary</item>
+        <item name="titleTextStyle">@style/MuzzleyActionBarTitleText</item>
+    </style>
+
+    <style name="MuzzleyActionBarTitleText" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+
+    <!--<style name="ViewAnimationOutUpInUp">-->
+        <!--<item name="android:windowEnterAnimation">@anim/slide_in_up</item>-->
+        <!--<item name="android:windowExitAnimation">@anim/slide_out_up</item>-->
+    <!--</style>-->
+
+
+    <style name="MuzzleyTryAgainButton">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@drawable/selector_try_again_text</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+    </style>
+
+    <style name="ButtonFooter" parent="Base.Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/selector_button_footer</item>
+        <item name="android:layout_marginLeft">25dp</item>
+        <item name="android:layout_marginRight">25dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_marginBottom">30dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="ButtonRoundedWhite" parent="Base.Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/selector_button_rounded_white</item>
+        <item name="android:layout_marginLeft">12dp</item>
+        <item name="android:layout_marginRight">12dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:textColor">@color/gray_dark</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="ButtonRoundedTransparent" parent="Base.Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/selector_button_rounded_transparent</item>
+        <item name="android:layout_marginLeft">12dp</item>
+        <item name="android:layout_marginRight">12dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="DayCheck" >
+        <!-- Customize your theme here. -->
+        <!--<item name="android:layout_width">wrap_content</item>-->
+        <!--<item name="android:layout_height">wrap_content</item>-->
+        <item name="android:layout_width">35dp</item>
+        <item name="android:layout_height">35dp</item>
+        <!--<item name="android:padding">3dp</item>-->
+        <item name="android:gravity">center</item>
+        <!--<item name="android:background">@drawable/time_text_selector</item>-->
+        <item name="android:background">@drawable/selector_time_text_background</item>
+        <item name="android:textColor">@color/selector_time_text_color</item>
+        <item name="android:button">@null</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="AlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- Used for the buttons -->
+        <!--<item name="colorAccent">@color/white</item>-->
+        <!--&lt;!&ndash; Used for the title and text &ndash;&gt;-->
+        <!--<item name="android:textColorPrimary">@color/white</item>-->
+        <!--&lt;!&ndash; Used for the background &ndash;&gt;-->
+        <!--<item name="android:background">@color/colorPrimary</item>-->
+    </style>
+
+    <style name="TextButton" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/textbutton_background</item>
+
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:minWidth">0dp</item>
+    </style>
+
+    <style name="WidgetTabButton">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:minHeight">35dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="WidgetButton" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/background_widget_button</item>
+        <item name="android:minHeight">35dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="BlueCheckbox" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/blue</item>
+        <item name="android:textColorSecondary">@color/checkbox_border</item>
+    </style>
+
+    <!--<style name="customCheckBoxStyle" parent="Widget.AppCompat.CompoundButton.CheckBox">-->
+        <!--<item name="android:button">@drawable/checkbox</item>-->
+    <!--</style>-->
+
+    <style name="customCheckedTextView" >
+        <!--<item name="textAppearance">?textAppearance</item>-->
+        <!--<item name="textAlignment">viewStart</item>-->
+        <item name="android:checkMark">?android:attr/listChoiceIndicatorMultiple</item>
+        <!--<item name="checkMark">?android:attr/listChoiceIndicatorMultiple</item>-->
+    </style>
+
+    <style name="TextAppearanceMicro" parent="@style/TextAppearance.AppCompat.Small">
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="Micro" parent="TextAppearanceMicro">
+        <item name="android:textStyle">italic</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="TextAppearence.App.TextInputLayout" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/profile_placeholder_username_text</item>
+    </style>
+
+    <style name="full_screen_dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    <style name="feedback">
+        <item name="android:layout_width">@dimen/button_blank_state_width</item>
+        <item name="android:layout_height">@dimen/user_feedback_option_height</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:background">@drawable/state_list_profile_feedback</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/user_feedback_font_size</item>
+        <item name="android:textStyle">normal</item>
+
+    </style>
+
+</resources>

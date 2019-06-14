@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.muzzley.app.shortcuts.ShortcutContainer
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    >
+
+    <RelativeLayout
+        android:padding="10dp"
+        android:clipToPadding="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/btn_shortcut"
+            android:layout_width="@dimen/widget_shortcut_btn_size"
+            android:layout_height="@dimen/widget_shortcut_btn_size"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shortcut_watch_icon_circle"
+            android:scaleType="center"
+            android:src="@drawable/ic_arrow"/>
+        <ImageButton
+            android:id="@+id/btn_remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/btn_shortcut"
+            android:layout_marginLeft="-26dp"
+            android:layout_marginTop="-10dp"
+            android:padding="5dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_delete" />
+
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="@dimen/widget_shortcut_btn_size"
+            android:layout_height="@dimen/widget_shortcut_btn_size"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/white"
+            android:indeterminateDrawable="@drawable/loader"
+            />
+
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/btn_shortcut"
+            android:id="@+id/shortcut_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:padding="10dp"
+            android:fontFamily="sans-serif-light"
+            android:gravity="left|center_vertical"
+            android:lineSpacingMultiplier="0.9"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/blackish"
+            tools:text="Shortcut 1 line"/>
+
+        <ImageButton
+            android:id="@+id/btn_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/btn_drag"
+            android:layout_centerVertical="true"
+            android:background="@drawable/background_btn_edit"
+            android:src="@drawable/ic_edit" />
+
+        <ImageButton
+            android:id="@+id/btn_drag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/background_btn_edit"
+            app:srcCompat="@drawable/drag" />
+
+
+    </RelativeLayout>
+
+</com.muzzley.app.shortcuts.ShortcutContainer>

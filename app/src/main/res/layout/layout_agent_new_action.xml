@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/device_image"
+            android:layout_width="@dimen/device_picker_children_image"
+            android:layout_height="@dimen/device_picker_children_image"
+            android:background="@color/transparent"
+            android:layout_marginTop="21dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"/>
+
+        <ImageView
+            android:id="@+id/device_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/button_cross_delete"
+            android:layout_marginTop="31dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/children_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/device_picker_children_space_img_text"
+            android:layout_marginRight="@dimen/device_picker_children_space_img_text"
+            android:maxLines="1"
+            tools:text="teste"
+            android:ellipsize="end"
+            android:textColor="@color/blue"
+            android:textSize="18sp"
+            android:layout_toRightOf="@id/device_image"
+            android:layout_toEndOf="@id/device_image"
+            android:layout_toLeftOf="@id/device_delete"
+            android:layout_toStartOf="@id/device_delete"
+            android:layout_alignTop="@id/device_delete"
+            android:fontFamily="sans-serif-medium"
+            />
+
+        <LinearLayout
+            android:id="@+id/dinamic_actions_from_channel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toLeftOf="@id/device_delete"
+            android:layout_toStartOf="@id/device_delete"
+            android:layout_alignLeft="@id/children_title"
+            android:layout_alignStart="@id/children_title"
+            android:layout_marginBottom="@dimen/agents_create_actions_subaction_detail_height"
+            android:layout_below="@id/children_title">
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

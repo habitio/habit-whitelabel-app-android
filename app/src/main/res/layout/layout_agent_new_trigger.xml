@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/layout_agent_item_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/top_line"
+            android:layout_width="@dimen/device_picker_vertical_line_width"
+            android:layout_height="25dp"
+            android:background="@color/gray_light"
+            android:visibility="invisible"
+            android:layout_marginLeft="@dimen/device_picker_vertical_line_margin_left_2" />
+
+        <ImageView
+            android:id="@+id/device_image"
+            android:layout_width="@dimen/device_picker_children_image"
+            android:layout_height="@dimen/device_picker_children_image"
+            android:background="@color/transparent"
+            android:src="@drawable/icon_clean"
+            android:layout_marginTop="19dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"/>
+
+        <ImageView
+            android:id="@+id/device_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/button_cross_delete"
+            android:layout_marginTop="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/children_title"
+            android:textSize="18sp"
+            android:textColor="@color/blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/device_picker_children_space_img_text"
+            android:layout_marginRight="@dimen/device_picker_children_space_img_text"
+            android:layout_toRightOf="@+id/device_image"
+            android:layout_toEndOf="@+id/device_image"
+            android:layout_toLeftOf="@+id/device_delete"
+            android:layout_toStartOf="@+id/device_delete"
+            android:layout_alignBottom="@+id/device_delete"
+            android:fontFamily="sans-serif-medium"
+            tools:text="titulo"
+            android:maxLines="1"
+            android:ellipsize="end"
+            />
+
+        <TextView
+            android:id="@+id/children_description"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/device_picker_children_space_img_text"
+            android:layout_marginRight="@dimen/device_picker_children_space_img_text"
+            android:layout_marginBottom="24dp"
+            android:layout_toRightOf="@+id/device_image"
+            android:layout_toEndOf="@+id/device_image"
+            android:layout_toLeftOf="@+id/device_delete"
+            android:layout_toStartOf="@+id/device_delete"
+            android:layout_below="@+id/children_title"
+            android:maxLines="2"
+            android:ellipsize="end"
+            tools:text="texto"
+            android:fontFamily="sans-serif-light"
+            android:textSize="13sp"
+            android:textColor="@color/agents_card_text_action_color"
+            />
+
+    </RelativeLayout>
+</LinearLayout>

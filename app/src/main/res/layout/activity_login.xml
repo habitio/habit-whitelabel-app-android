@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/mobile_signin"
+            android:textColor="@color/blackish"
+            android:textSize="25sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/emailEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/mobile_settings_notifications_email"
+            android:inputType="textEmailAddress"
+            android:layout_margin="10dp"
+            android:textColor="@color/blackish"
+            android:textSize="14sp"/>
+
+        <com.muzzley.util.ui.PasswordEditText
+            android:id="@+id/passwordEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/mobile_password"
+            android:inputType="textPassword"
+            android:layout_margin="10dp"
+            android:textColor="@color/blackish"
+            android:textSize="14sp"/>
+
+        <Button
+            android:id="@+id/submitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/selector_button_footer"
+            android:enabled="false"
+            android:text="@string/mobile_signin"
+            android:textAllCaps="false"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/button_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:text="@string/mobile_forgot_password"
+            android:textColor="@color/blue"
+            android:textSize="14sp"/>
+
+        <include layout="@layout/social_login"/>
+        <!--<TextView-->
+            <!--android:textStyle="bold"-->
+            <!--android:layout_marginTop="30dp"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:text="@string/mobile_or"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"/>-->
+
+        <!--<Button-->
+            <!--android:id="@+id/fbLoginButton"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="30dp"-->
+            <!--android:background="@drawable/selector_button_footer"-->
+            <!--android:text="Connect with facebook"-->
+            <!--android:backgroundTint="@color/com_facebook_blue"-->
+            <!--android:textAllCaps="false"-->
+            <!--android:textColor="@color/white"/>-->
+
+        <!--<Button-->
+            <!--android:id="@+id/googleLoginButton"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="30dp"-->
+            <!--android:background="@drawable/selector_button_footer"-->
+            <!--android:text="Connect with Google +"-->
+            <!--android:backgroundTint="@color/googleplus_box"-->
+            <!--android:textAllCaps="false"-->
+            <!--android:textColor="@color/white"/>-->
+
+
+    </LinearLayout>
+</ScrollView>

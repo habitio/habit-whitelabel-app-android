@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:visibility="gone"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/mobile_or"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/fbLoginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/selector_button_footer"
+        android:text="Connect with Facebook"
+        android:backgroundTint="@color/facebook_box"
+        android:textAllCaps="false"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/googleLoginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/selector_button_footer"
+        android:text="Connect with Google +"
+        android:backgroundTint="@color/googleplus_box"
+        android:textAllCaps="false"
+        android:textColor="@color/white"/>
+</merge>

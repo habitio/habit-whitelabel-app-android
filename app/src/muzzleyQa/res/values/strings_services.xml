@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+    <string name="app_name">Muzz QA</string>
+    <string name="azure_connection_string">REPLACEME</string>
+    <string name="app_open_scheme">muzzleyqa</string>
+
+</resources>

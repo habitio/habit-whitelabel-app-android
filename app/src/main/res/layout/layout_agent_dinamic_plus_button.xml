@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <View
+        android:id="@+id/top_line"
+        android:layout_width="@dimen/device_picker_vertical_line_width"
+        android:layout_height="25dp"
+        android:background="@color/gray_light"
+        android:visibility="invisible"
+        android:layout_marginLeft="@dimen/device_picker_vertical_line_margin_left_2" />
+
+    <!--<ImageView-->
+        <!--android:id="@+id/agent_add_new_item"-->
+        <!--android:layout_width="@dimen/device_picker_blue_button_plus"-->
+        <!--android:layout_height="@dimen/device_picker_blue_button_plus"-->
+        <!--android:background="@drawable/blue_circle_plus"-->
+        <!--android:src="@drawable/icon_plus_big_agents"-->
+        <!--android:padding="@dimen/device_picker_blue_button_plus_inside_padding"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:layout_marginBottom="20dp"-->
+        <!--android:layout_marginLeft="14dp"-->
+    <!--/>-->
+    <ImageButton
+        android:id="@+id/agent_add_new_item"
+        android:layout_width="@dimen/device_picker_blue_button_plus"
+        android:layout_height="@dimen/device_picker_blue_button_plus"
+        android:background="@drawable/blue_circle_plus"
+        android:src="@drawable/icon_plus_big_agents"
+        android:padding="@dimen/device_picker_blue_button_plus_inside_padding"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="14dp"
+        android:clickable="false"
+        />
+
+    <TextView
+        android:id="@+id/worker_add_new_item_text"
+        android:layout_toRightOf="@id/agent_add_new_item"
+        android:layout_toEndOf="@id/agent_add_new_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textSize="@dimen/agents_create_parents_text_size"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="italic"
+        android:textColor="@color/blue"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        tools:text="bla bla"
+        />
+    <TextView
+        android:id="@+id/worker_add_new_item_error_text"
+        android:layout_toRightOf="@id/agent_add_new_item"
+        android:layout_toEndOf="@id/agent_add_new_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:textSize="13sp"
+        android:textColor="@color/red"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        tools:text="My Error"
+        android:layout_below="@+id/worker_add_new_item_text"
+        />
+
+</RelativeLayout>

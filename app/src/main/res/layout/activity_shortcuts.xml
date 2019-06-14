@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.muzzley.app.shortcuts.ShortcutsActivity"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/animation_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/abc_action_bar_default_height_material"
+        android:background="@color/shortcut_activity_background">
+
+        <include
+            layout="@layout/layout_shortcuts_actions" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_show_less"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="6dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/mobile_show_less"
+            style="@style/TextButton" />
+
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/button_container">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/shortcut_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            android:paddingLeft="@dimen/device_picker_horizontal_margin"
+            android:paddingRight="@dimen/device_picker_horizontal_margin"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:visibility="invisible"/>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@android:id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/no_shortcuts"
+        android:visibility="invisible" />
+
+</RelativeLayout>
+

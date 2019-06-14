@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <TextView
+        android:id="@+id/header_title"
+        android:background="@drawable/device_picker_parent"
+        android:textSize="@dimen/device_picker_parent_text"
+        android:textColor="@color/device_picker_parent_text"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Thermostate"
+        android:fontFamily="sans-serif-regular"
+        android:paddingLeft="9dp"
+        android:paddingTop="6dp"
+        android:paddingRight="6dp"
+        android:paddingBottom="6dp" />
+
+</RelativeLayout>

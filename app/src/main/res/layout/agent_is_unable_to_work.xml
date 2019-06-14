@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white_opacity_80"
+                android:clickable="true">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mobile_worker_noexecuted_error_text"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+         />
+
+    <ImageView
+        android:id="@+id/agent_compromised"
+        android:layout_width="@dimen/workers_progress_bar"
+        android:layout_height="@dimen/workers_progress_bar"
+        app:srcCompat="@drawable/icon_alert"
+        android:tint="@color/red"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@+id/textView1"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/agent_unable_cancel_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                android:text="@android:string/cancel"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/blue"
+            android:textSize="14sp"
+            android:background="@drawable/selector_agent_warning_buttons"
+            android:clickable="true"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/agent_unable_retry_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/widget_retry"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/blue"
+            android:textSize="14sp"
+            android:background="@drawable/selector_agent_warning_buttons"
+            android:clickable="true"
+            android:padding="10dp" />
+
+    </LinearLayout>
+</RelativeLayout>

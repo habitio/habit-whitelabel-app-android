@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.muzzley.util.ui.SegmentsContainer
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/segmentedGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@+id/shadow_bellow_header"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_below="@id/segmentedGroup"
+        android:background="@drawable/agent_gradient_shadow_new"
+        android:elevation="2dp"/>
+
+
+    <com.muzzley.util.ui.MuzzleySwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/segmentedGroup">
+
+        <ViewFlipper android:id="@+id/viewFlipper"
+                     xmlns:android="http://schemas.android.com/apk/res/android"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/layout_loading_state"
+                layout="@layout/tiles_layout_loading_states"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"/>
+
+            <!--<include-->
+                <!--android:id="@+id/layout_blank_state"-->
+                <!--layout="@layout/tiles_layout_blank_states"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:gravity="center"/>-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_lighter"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_lighter"
+                android:paddingLeft="@dimen/tiles_right_left_margin"
+                android:paddingRight="@dimen/tiles_right_left_margin"/>
+
+            <include
+                android:id="@+id/layout_error_state"
+                layout="@layout/tiles_layout_error_states"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"/>
+
+        </ViewFlipper>
+    </com.muzzley.util.ui.MuzzleySwipeRefreshLayout>
+
+
+</RelativeLayout>
+

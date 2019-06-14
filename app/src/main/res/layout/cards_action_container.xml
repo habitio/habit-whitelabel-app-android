@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.muzzley.app.cards.ActionsContainer xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_marginTop="40dp"
+             android:layout_width="match_parent"
+             android:layout_height="40dp"
+            android:inAnimation="@anim/fade_in"
+            android:outAnimation="@anim/fade_out"
+    >
+
+    <LinearLayout
+        android:gravity="center_vertical|left"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/working"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:text="@string/mobile_cards_loading"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearanceMicro"
+            android:textColor="@color/grey"/>
+
+        <ProgressBar
+            android:layout_gravity="center_vertical"
+            style="?android:attr/android:progressBarStyleSmall"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <TextView
+        android:background="@color/green_muzzley"
+        android:drawableLeft="@drawable/success"
+        android:drawablePadding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:text="@string/mobile_thank_you"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearanceMicro"
+        android:textColor="@color/white"/>
+    <TextView
+        android:background="@color/red"
+        android:drawableLeft="@drawable/error"
+        android:drawablePadding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:text="@string/mobile_error_title"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearanceMicro"
+        android:textColor="@color/white"/>
+    <!--android:drawableRight="@drawable/close_message"-->
+</com.muzzley.app.cards.ActionsContainer>
